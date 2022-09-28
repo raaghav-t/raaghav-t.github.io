@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <ul>
+        <li><a href="google.com">Home</a></li>
+        <li><a href="google.com">News</a></li>
+        <li><a href="google.com">Contact</a></li>
+        <li><a href="google.com">About</a></li>
+    </ul> 
+
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Raaghav T</title>
+        <link rel="icon" type="image/x-icon" href="favicon.gif">
+        <style>
+            .city {
+              background-color: rgb(151, 0, 25);
+              color: rgb(181, 255, 209);
+              border: 15px solid black;
+              margin: 0px;
+              padding: 10px;
+            }
+        </style>
+         <div class="city">
+            <h1>Raaghav Thirumaligai (WIP) - retired</h1>
+            
+         </div>
+       
+        
+</head>
+    <body style="background-color:rgb(111, 235, 252);">
+     <!--   
+        ayo why u snoopin in my code??? its trash!
+    -->
+        <p> Current Projects</p>
+        <form action="https://raaghav-t.github.io/Assignments/A8/8_Assignment.html">
+            <input type="submit" value="EA7 page" />
+        </form>
+
+        <p> No EA this week</p>
+        
+        <p> Final Project</p>
+        <form action="https://raaghav-t.github.io/Assignments/AFinal/Final_Assignment.html">
+            <input type="submit" value="Final Project- not ready" />
+        </form>
+
+        <p> Past Projects</p>
+        <form action="https://raaghav-t.github.io/E-Assignments/EA1/1_Electronic_Assignment.html">
+            <input type="submit" value="EA1 page" />
+        </form>
+
+        <form action="https://raaghav-t.github.io/Assignments/A1/1_Assignment.html">
+            <input type="submit" value="A1 page" />
+        </form>
+        
+        <form action="https://raaghav-t.github.io/E-Assignments/EA2/2_Electronic_Assignment.html">
+            <input type="submit" value="EA2 page" />
+        </form>
+
+        <form action="https://raaghav-t.github.io/Assignments/A2/2_Assignment.html">
+            <input type="submit" value="A2 page" />
+        </form>
+
+        <form action="https://raaghav-t.github.io/E-Assignments/EA3/3_Electronic_Assignment.html">
+            <input type="submit" value="EA3 page" />
+        </form>
+
+        <form action="https://raaghav-t.github.io/Assignments/A3/3_Assignment.html">
+            <input type="submit" value="A3 page" />
+        </form>
+
+        <form action="https://raaghav-t.github.io/E-Assignments/EA4/4_Electronic_Assignment.html">
+            <input type="submit" value="EA4 page" />
+        </form>
+
+        <form action="https://raaghav-t.github.io/Assignments/A4/4_Assignment.html">
+            <input type="submit" value="A4 page" />
+        </form>
+        
+        <form action="https://raaghav-t.github.io/E-Assignments/EA5/5_Electronic_Assignment.html">
+            <input type="submit" value="EA5 page" />
+        </form>
+
+        <form action="https://raaghav-t.github.io/Assignments/A5/5_Assignment.html">
+            <input type="submit" value="A5 page" />
+        </form>
+
+        <form action="https://raaghav-t.github.io/E-Assignments/EA6/6_Electronic_Assignment.html">
+            <input type="submit" value="EA6 page" />
+        </form>
+
+        <form action="https://raaghav-t.github.io/Assignments/A6/6_Assignment.html">
+            <input type="submit" value="A6 page" />
+        </form>
+
+        <form action="https://raaghav-t.github.io/E-Assignments/EA7/7_Electronic_Assignment.html">
+            <input type="submit" value="EA7 page" />
+        </form>
+
+        <form action="https://raaghav-t.github.io/Assignments/A7/7_Assignment.html">
+            <input type="submit" value="A7 page" />
+        </form>
+
+    </body>
+</html>
