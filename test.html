@@ -1,0 +1,175 @@
+<html>
+<style>
+
+#game {
+  width: 400px;
+  height: 300px;
+  position: relative;
+}
+
+#game-field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#game-paddles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+#game-score {
+  color: white;
+}
+
+</style>
+<body>
+
+    <div id="game">
+        <canvas id="game-field" width="400" height="300"></canvas>
+        <canvas id="pong-canvas" width="400" height="300"></canvas>
+        <script>
+          // Get the canvas and its context
+          var canvas = document.getElementById('pong-canvas');
+          var ctx = canvas.getContext('2d');
+        
+          // Set up the paddle
+          var paddleHeight = 10;
+          var paddleWidth = 75;
+          var paddleX = (canvas.width - paddleWidth) / 2;
+          var rightPressed = false;
+          var leftPressed = false;
+        
+          // Set up the keyboard controls
+          document.addEventListener("keydown", keyDownHandler, false);
+          document.addEventListener("keyup", keyUpHandler, false);
+        
+          function keyDownHandler(e) {
+            if (e.keyCode == 39) {
+              rightPressed = true;
+            }
+            else if (e.keyCode == 37) {
+              leftPressed = true;
+            }
+          }
+        
+          function keyUpHandler(e) {
+            if (e.keyCode == 39) {
+              rightPressed = false;
+            }
+            else if (e.keyCode == 37) {
+              leftPressed = false;
+            }
+          }
+        
+          // Draw the paddle
+          function drawPaddle() {
+            ctx.beginPath();
+            ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+            ctx.fillStyle = "#0095DD";
+            ctx.fill();
+            ctx.closePath();
+          }
+        
+          // Update the paddle's position
+          function movePaddle() {
+            if (rightPressed && paddleX < canvas.width - paddleWidth) {
+              paddleX += 7;
+            }
+            else if (leftPressed && paddleX > 0) {
+              paddleX -= 7;
+            }
+          }
+        
+          // Game loop
+          function draw() {
+            // Clear the canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+            // Move the paddle
+            movePaddle();
+        
+            // Draw the paddle
+            drawPaddle();
+        
+            // Request another frame
+            requestAnimationFrame(draw);
+          }
+        
+          // Start the game loop
+          draw();
+
+          // Initialize game variables
+var canvas = document.getElementById('pong-canvas');
+var ctx = canvas.getContext('2d');
+var ballRadius = 10;
+var x = canvas.width / 2;
+var y = canvas.height - 30;
+var dx = 2;
+var dy = -2;
+var paddleHeight = 10;
+var paddleWidth = 75;
+var paddleX = (canvas.width - paddleWidth) / 2;
+var rightPressed = false;
+var leftPressed = false;
+
+// Load game assets (e.g. images, audio)
+
+// Display start screen or menu
+function drawStartScreen() {
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.textAlign = "center";
+  ctx.fillText("Press SPACE to start", canvas.width / 2, canvas.height / 2);
+}
+drawStartScreen();
+
+// Set up keyboard controls for starting the game
+document.addEventListener("keydown", keyDownHandler, false);
+function keyDownHandler(e) {
+  if (e.keyCode == 32) {  // SPACE key
+    startGame();
+  }
+}
+
+// Start the game
+function startGame() {
+  // Hide start screen
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Set up game loop
+  function draw() {
+    // Move the ball
+    x += dx;
+    y += dy;
+
+    // Bounce the ball off the walls
+    if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+      dx = -dx;
+    }
+    if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+      dy = -dy;
+    }
+
+    // Draw the ball
+    ctx.beginPath();
+    ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+    ctx.fillStyle = "#0095DD";
+    ctx.fill();
+    ctx.closePath();
+
+    // Request another frame
+    requestAnimationFrame(draw);
+  }
+
+  // Start the game loop
+  draw();
+}
+
+        </script>
+    </div>        
+</body>
+</html>
