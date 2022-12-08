@@ -1,27 +1,32 @@
 <html>
   <head>
     <title>My Website</title>
+    <style>
+      .expanded {
+        position: absolute;
+        z-index: 10;
+        width: 75%;
+      }
+    </style>
   </head>
   <body>
     <h1>Welcome to my website!</h1>
-    <button id="my-button" onclick="changeButton()">Click Me!</button>
+    <img id="my-image" src="MeInTunnel.jpeg" onclick="expandCollapse()">
+    <img id="my-image" src="MeInTunnel.jpeg" onclick="expandCollapse()">
 
     <script>
-      function changeButton() {
-        // Get the button element
-        var button = document.getElementById('my-button');
+      function expandCollapse() {
+        // Get the image element
+        var img = document.getElementById('expandable');
 
-        // Set the button's background color to blue
-        button.style.backgroundColor = 'blue';
-
-        // Set the button's text color to white
-        button.style.color = 'white';
-
-        // Set the button's font size to 16px
-        button.style.fontSize = '16px';
-
-        // Set the button's border radius to 5px
-        button.style.borderRadius = '5px';
+        // Check if the image has the "expanded" class
+        if (img.classList.contains('expanded')) {
+          // The image has the "expanded" class, so remove it
+          img.classList.remove('expanded');
+        } else {
+          // The image does not have the "expanded" class, so add it
+          img.classList.add('expanded');
+        }
       }
     </script>
   </body>
