@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        button {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        border-radius: 15px;
+        opacity: 0.5;
+        }
+        
         div.gallery {
             margin: 5px;
             border: 1px solid #ccc;
@@ -43,8 +51,7 @@
     </style>
 </head>
 
-<body class="w3-light-grey w3-content" style="max-width:1600px">
-
+<body class="w3-content" style="max-width:1600px">
     <!-- Sidebar/menu -->
     <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
         <div class="w3-container">
@@ -81,15 +88,32 @@
 
         <!-- Header -->
         <header>
-            <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;"
+            <a href="#"><img src="SidebarAvatar1.jpg" style="width:65px;"
                     class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
             <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
                     class="fa fa-bars"></i></span>
             <div class="w3-container">
                 <h1 id="about"><b>Writ 2E Final Portfolio</b></h1>
+                <div>
+                    <button onclick="changeBackground()">RandomColor!</button>
+
+                    <script>
+                        document.body.style.backgroundColor = '#ededed';
+                      function changeBackground() {
+                        // Generate a random value between 0 and 1
+                        var r = Math.random();
+                
+                        // Convert the random value to a valid CSS color value
+                        var color = '#' + Math.round(r * 0xFFFFFF).toString(16);
+                
+                        // Set the background color of the document to the random color
+                        document.body.style.backgroundColor = color;
+                      }
+                    </script>
+                </div>
 
                 <div class="w3-section w3-bottombar w3-padding-16">
-                    <span class="w3-margin-right">I'm going to put this note here: hyperlinks are plentiful here so click away! 🔗</span>
+                    <span class="w3-margin-right">The Random Color was almost entirely done by ChatGPT - Reload page to reset to grey. Also, hyperlinks are interesting here so click away! 🔗</span>
                 </div>
             </div>
         </header>
@@ -259,6 +283,7 @@
                         <li class="w3-padding-16"> </li>
                         <li class="w3-opacity w3-hover-opacity-off">
                             <a
+                                target="_blank"
                                 href="https://docs.google.com/presentation/d/1VfliMGMOd5tiJG_G2yQYgPACNwccodGzhgZn_bJQNMg/edit?usp=sharing"><img
                                     src="WhoAreWeMe.jpg" style="width:95%;" class="w3-round"><br><br></a>
                         </li>
