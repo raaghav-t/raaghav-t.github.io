@@ -10,6 +10,25 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        .scrolling-text-container {
+        width: 350px;
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .scrolling-text {
+        white-space: nowrap;
+        animation: scrolling-text 4s linear infinite;
+      }
+
+      @keyframes scrolling-text {
+        from {
+          transform: translateX(-150%);
+        }
+        to {
+          transform: translateX(150%);
+        }
+      }
         button {
         background-color: rgb(255, 255, 255);
         color: rgb(0, 0, 0);
@@ -92,7 +111,10 @@
             <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
                     class="fa fa-bars"></i></span>
             <div class="w3-container">
-                <h1 id="about"><b>Writ 2E Final Portfolio</b></h1>
+                <div class="scrolling-text-container">
+                    <h1 class="scrolling-text" id="about"><b>Writ 2E Final Portfolio</b></h1>
+                </div>
+                
                 <div>
                     <button onclick="changeBackground()">RandomColor!</button>
 

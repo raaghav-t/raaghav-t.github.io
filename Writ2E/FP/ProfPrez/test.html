@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>My Website</title>
+    <style>
+      .scrolling-text-container {
+        width: 300px;
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .scrolling-text {
+        white-space: nowrap;
+        animation: scrolling-text 3s linear infinite;
+      }
+
+      @keyframes scrolling-text {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to my website!</h1>
+    <div class="scrolling-text-container">
+      <p class="scrolling-text">My scrolling text</p>
+    </div>
+  </body>
+</html>
