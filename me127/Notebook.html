@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FinalPortfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.gif">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .scrolling-text-container {
+        width: 350px;
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .scrolling-text {
+        white-space: nowrap;
+        animation: scrolling-text 4s linear infinite;
+      }
+
+    .body.style.backgroundColor {
+        background-color: rgb(0, 7, 41);
+      }
+        
+        div.gallery {
+            margin: 5px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 180px;
+        }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(14, 0, 63);
+        }
+        body,
+        h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    </style>
+</head>
+
+<body class="w3-content" style="max-width:1600px" document.body.style.backgroundColor = "background-color";>
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+        <div class="w3-container">
+            <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
+                title="close menu">
+                <i class="fa fa-remove"></i>
+            </a>
+            <img src="SidebarAvatar1.jpg" style="width:45%;" class="w3-round"><br><br>
+            <h4><b>ME 127</b></h4>
+            <p class="w3-text-blue">Design Notebook</p>
+
+        </div>
+        <div class="w3-bar-block">
+            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
+                    class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
+            <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
+                    class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
+                    class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+        </div>
+        <div class="w3-panel w3-large">
+            <a class="fa fa-instagram w3-hover-opacity" href="https://www.instagram.com/raaghav.t/" style="text-decoration: none"></a>
+            <a class="fa fa-linkedin w3-hover-opacity" href="https://www.linkedin.com/in/raaghav-thirumaligai-9309a5227/" style="text-decoration: none"></a>
+        </div>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Header -->
+        <header>
+            <a href="#"><img src="SidebarAvatar1.jpg" style="width:65px;"
+                    class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+            <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
+                    class="fa fa-bars"></i></span>
+            <div class="w3-container">
+  
+            </div>
+        </header>
+
+
+        <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+            <h4><b>Design Notebook</b></h4>
+            <p>Hey, this is Raaghav Thirumaligai. Welcome to my Design Notebook for ME 127 </p>
+            <!-- Images of Me -->
+            <div class="w3-row-padding w3-padding-16">
+                <div class="gallery">
+                    <a target="_blank" href="https://lawrencehallofscience.org/">
+                        <img src="placeh.jpeg" alt="placeholder image" width="auto" height="auto">
+                    </a>
+                    <div class="desc">🔗Trip to the Lawrence Hall of Science in Berkeley.</div>
+                </div>
+
+                <div class="gallery">
+                    <a target="_blank" href="https://galileo-camps.com/themes-majors/go-kart-builders/">
+                        <img src="placeh.jpeg" alt="placeholder image" width="auto" height="auto">
+                    </a>
+                    <div class="desc">🔗Wooden Go-Kart, built at Galileo Summer Camp.</div>
+                </div>
+
+                <div class="gallery">
+                    <a target="_blank" href="https://www.kapla-usa.com/products/kapla-200-box">
+                        <img src="placeh.jpeg" alt="placeholder image" width="auto" height="auto">
+                    </a>
+                    <div class="desc">🔗Building a tower out of wooden Kapla blocks.</div>
+                </div>
+
+                <div class="gallery">
+                    <a target="_blank" href="https://www.news.ucsb.edu/2015/015453/light-passages">
+                        <img src="placeh.jpeg" alt="placeholder image" width="auto" height="auto">
+                    </a>
+                    <div class="desc">🔗I just look good in this pic- Pardall Light Passage.</div>
+                </div>
+            </div>
+            <div class="w3-row-padding w3-padding-16">
+                <div class="gallery">
+                    <a target="_blank" href="https://lawrencehallofscience.org/">
+                        <img src="placeh.jpeg" alt="placeholder image" width="auto" height="auto">
+                    </a>
+                    <div class="desc">Week Five</div>
+                </div>
+
+                <div class="gallery">
+                    <a target="_blank" href="https://galileo-camps.com/themes-majors/go-kart-builders/">
+                        <img src="placeh.jpeg" alt="placeholder image" width="auto" height="auto">
+                    </a>
+                    <div class="desc">Week Six</div>
+                </div>
+
+                <div class="gallery">
+                    <a target="_blank" href="https://www.kapla-usa.com/products/kapla-200-box">
+                        <img src="placeh.jepg" alt="placeholder image" width="auto" height="auto">
+                    </a>
+                    <div class="desc">Week Seven</div>
+                </div>
+
+                <div class="gallery">
+                    <a target="_blank" href="https://www.news.ucsb.edu/2015/015453/light-passages">
+                        <img src="placeh.jpeg" alt="placeholder image" width="auto" height="auto">
+                    </a>
+                    <div class="desc">Week Eight</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="w3-container w3-padding-large w3-grey">
+            <h4 id="contact"><b>Contact Me</b></h4>
+            <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+                <div class="w3-third w3-dark-grey">
+                    <p><i class="fa fa-envelope-o w3-xxlarge w3-text-light-grey"></i></p>
+                    <a 
+                        href="mailto:rthirumaligai@ucsb.edu" 
+                        style="text-decoration: none"
+                    >rthirumaligai@ucsb.edu</a>
+                    <p>🔗Email me!</p>
+                </div>
+                <div class="w3-third w3-teal">
+                    <p><i class="fa fa-map-o w3-xxlarge w3-text-light-grey"></i></p>
+                    <a
+                        href="https://www.google.com/maps/@34.4062751,-119.843496,3a,75y,215.49h,90.11t/data=!3m8!1e1!3m6!1sAF1QipNwPl6YblV3wu7ij5dhI-Vn582Y7KGsiDLMVVyf!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNwPl6YblV3wu7ij5dhI-Vn582Y7KGsiDLMVVyf%3Dw203-h100-k-no-pi-0-ya178.34355-ro-0-fo100!7i5504!8i2752"
+                        style="text-decoration: none"
+                        >
+                        Isla Vista, California</a>
+                    <p>🔗(this one is a fun link)</p>
+
+
+                </div>
+                <div class="w3-third w3-dark-grey">
+                    <p><i class="fa fa-mobile w3-xxlarge w3-text-light-grey"></i></p>
+                    <a 
+                        href="tel:8186512193"
+                        style="text-decoration: none"
+                    >(818)-651-2193</a>
+                    <p>🔗Call me!</p>
+                </div>
+            </div>
+        </div>
+        <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp"
+                title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
