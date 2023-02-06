@@ -101,24 +101,28 @@
 
 
         <div class="w3-container w3-padding-large" style="margin-bottom:32px" id="title">
-            <h2>Design Notebook - Assignment Three</h2>
+            <h2>Design Notebook - Assignment Four</h2>
             <h4>This page will have the homework answers and design notebook content!</h4>
             <!-- thing -->
             <div style="display: flex; flex-direction: column;">
-                <h5>Part One</h5>
-                <h5>Serial Plotter</h5>
-                <img src="images/h3/plotter.png" alt="" width="85%" height="auto" style="padding: 2.5%;">
-                <h5>Breadboard and Rf module</h5>
-                <img src="images/h3/board.jpeg" alt="" width="85%" height="auto" style="padding: 2.5%;">
+                <h5>Homework:</h5>
+                <h5>Arduino code with changes at bottom</h5>
+                <h5>Video of the robot driving up the ramp</h5>
+                <iframe width="85%" height="550" src="https://www.youtube.com/embed/CPSNmVf3pc4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="padding: 2.5%;"></iframe>
+                <h5>The robot did not slip?</h5>
+                <img src="images/h4/duck.webp" alt="" width="55%" height="auto" style="padding: 2.5%;">
                 <div style="display: flex; flex-direction: row;">
-                <a href = "https://github.com/bnahill/rf-controller" style="padding: 2.5%;"><h4>Click to beamo code.</h4></a>
+                <a href = "https://github.com/raaghav-t/rf-controller/blob/master/receiver_fw/sketch/sketch.ino" style="padding: 2.5%;"><h4>Click to edited beamo code.</h4></a>
                     <div style="padding: 2.5%;">
                         <p> Notes:</p>
-                        <p> Bending the prongs inward on the adapter for the RF module is necessary otherwise there is no contact with the breadboard</p>
-                        <p> Forgot to change channel in code initially lol</p>
-                        <p> Some channels weren't working for Sreeram?</p>
-                        <p> ^probably what Geoff was talking abt with soldering connections</p>
-                        <p> Def want to print enclosure and buttons for Beamo but the board looks cool so wanna leave parts visible.</p>
+                        <p> Did the code for the servos, the robot is difficult to drive.</p>
+                        <p> The right servo is backwards so I just flipped the map function to be 180 -> 0 and that worked.</p>
+                        <p> I first made it just go forwards and backwards to test stability etc.</p>
+                        <p> So this may be questionable(sketchy), I'm not exactly sure how this works - I didn't think, it was just intuition.</p>
+                        <p> As you'll see in the code, each wheel is controlled by a combination of the x and y joystick movement. </p>
+                        <p> So, we have it map now from 0 to 90 for x and y, this means when joystick is zeroed. </p> 
+                        <p> Both x and y output 45 which adds together in the next line and is sent to the servo as 90, aka no rotation.</p>
+                        <p> </p>
                     </div>
                 </div>
             </div>
