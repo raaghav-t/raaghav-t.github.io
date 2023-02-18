@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Design Notebook</title>
+    <link rel="icon" type="image/x-icon" href="favicon.gif">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        div.gallery {
+            margin: 5px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 180px;
+        }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(14, 0, 63);
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Raleway", sans-serif
+        }
+    </style>
+</head>
+
+<body class="w3-content" style="max-width:1600px; background-color: rgb(195, 243, 255);">
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+        <div class="w3-container">
+            <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
+                title="close menu">
+                <i class="fa fa-remove"></i>
+            </a>
+            <img src="images/SidebarAvatar1.jpg" style="width:45%;" class="w3-round"><br><br>
+            <h4><b>ME 127</b></h4>
+            <a href="https://raaghav-t.github.io/me127/Notebook.html">
+                <p class="w3-text-blue">Notebook Home</p>
+            </a>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#title" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
+                    class="fa fa-user fa-fw w3-margin-right"></i>TITLE</a>
+            <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
+                    class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
+                    class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+        </div>
+        <div class="w3-panel w3-large">
+            <a class="fa fa-instagram w3-hover-opacity" href="https://www.instagram.com/raaghav.t/"
+                style="text-decoration: none"></a>
+            <a class="fa fa-linkedin w3-hover-opacity"
+                href="https://www.linkedin.com/in/raaghav-thirumaligai-9309a5227/" style="text-decoration: none"></a>
+        </div>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Header -->
+        <header>
+            <a href="#"><img src="images/SidebarAvatar1.jpg" style="width:65px;"
+                    class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+            <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
+                    class="fa fa-bars"></i></span>
+            <div class="w3-container">
+
+            </div>
+        </header>
+
+
+        <div class="w3-container w3-padding-large" style="margin-bottom:32px" id="title">
+            <h2>Design Notebook - Assignment Five</h2>
+            <h4>This page will have the homework answers and design notebook content!</h4>
+            <!-- thing -->
+            <div style="display: flex; flex-direction: column;">
+                <h5>Homework:</h5>
+                <h5>Video of the robot driving up the ramp and delivering ball</h5>
+                <iframe width="85%" height="550" src="https://www.youtube.com/embed/VCKSvo-8qPw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="padding: 2.5%;"></iframe>
+                <h5>5 Sketches</h5>
+                <div style="display: flex; flex-direction: row;">
+                    <div>
+                        <div class="w3-row-padding w3-padding-16">
+                            <div class="gallery">
+                                <img src="images/h5/idea1.png" alt="Claw" width="auto" height="auto">
+                                <div class="desc">Claw</div>
+                            </div>
+                            <div class="gallery">
+                                <img src="images/h5/idea2.png" alt="Scoop" width="auto" height="auto">
+                                <div class="desc">Scoop</div>
+                            </div>
+                            <div class="gallery">
+                                <img src="images/h5/idea3.png" alt="Suction" width="auto" height="auto">
+                                <div class="desc">Suction</div>
+                            </div>
+                            <div class="gallery">
+                                <img src="images/h5/idea4.png" alt="Shovel" width="auto" height="auto">
+                                <div class="desc">Shovel</div>
+                            </div>
+                            <div class="gallery">
+                                <img src="images/h5/idea5.png" alt="Cage" width="auto" height="auto">
+                                <div class="desc">Cage</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p> The claw has two arms that close to grab the ball.</p>
+                        <p> The scoop rotates to lift the ball from under.</p>
+                        <p> The suction has a large fan to pull the ball up into it.</p>
+                        <p> The shovel is like the scoop but the top part moves and closes down to hold the ball.</p>
+                        <p> The cage lowers down onto the ball to hold it in place until it needs to drop into the hole.</p>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                    <div class="w3-row-padding w3-padding-16">
+                        <div class="gallery">
+                            <img src="images/h5/robowot.png" alt="robot" width="auto" height="auto">
+                            <div class="desc"> view of breadboard</div>
+                        </div>
+                    </div>
+                    <div style="padding: 2.5%;">
+                        <p> Notes:</p>
+                        <p> Unrelated to assignment, I 3d printed a body and wired the RF module directly to the arduino to clean up the breadboard.</p>
+                        <p> There were AT LEAST 16 attempts with various adaptations before the robot could complete the task. </p>
+                        <p> The first idea was adding tape to the claw.</p>
+                        <p> Then adding longer claw extensions.</p>
+                        <p> Replacing extensions with a tape cone to grab ball, this worked but didn't drop the ball.</p>
+                        <p> Then a wedge of cardboard so the ball would go in but not come out</p>
+                        <p> Changing orientation of wedge to let ball in easier.</p>
+                        <p> Having a thinner loop to let it in better against a wall.</p>
+                        <p> Using loop as a spoon, worked but wouldn't drop the ball.</p>
+                        <p> Cardboard fins to capture ball but this also wouldn't drop the ball.</p>
+                        <p> Bending fins to just hold the ball and not carry it, finally letting the ball drop into the goal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Section -->
+        <div class="w3-container w3-padding-large w3-grey">
+            <h4 id="contact"><b>Contact Me</b></h4>
+            <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+                <div class="w3-third w3-dark-grey">
+                    <p><i class="fa fa-envelope-o w3-xxlarge w3-text-light-grey"></i></p>
+                    <a href="mailto:rthirumaligai@ucsb.edu" style="text-decoration: none">rthirumaligai@ucsb.edu</a>
+                    <p>Email me!</p>
+                </div>
+                <div class="w3-third w3-teal">
+                    <p><i class="fa fa-map-o w3-xxlarge w3-text-light-grey"></i></p>
+                    <a href="https://www.google.com/maps/@34.4062751,-119.843496,3a,75y,215.49h,90.11t/data=!3m8!1e1!3m6!1sAF1QipNwPl6YblV3wu7ij5dhI-Vn582Y7KGsiDLMVVyf!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNwPl6YblV3wu7ij5dhI-Vn582Y7KGsiDLMVVyf%3Dw203-h100-k-no-pi-0-ya178.34355-ro-0-fo100!7i5504!8i2752"
+                        style="text-decoration: none">
+                        Isla Vista, California</a>
+                    <p>(this one is a fun link)</p>
+
+
+                </div>
+                <div class="w3-third w3-dark-grey">
+                    <p><i class="fa fa-mobile w3-xxlarge w3-text-light-grey"></i></p>
+                    <a href="tel:8186512193" style="text-decoration: none">(818)-651-2193</a>
+                    <p>Call me!</p>
+                </div>
+            </div>
+        </div>
+        <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp"
+                title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
