@@ -114,30 +114,22 @@
                 <h4> Mechanical Performance</h4>
                 <div>
                     <h5> Notes:</h5>
-                    <p> </p>
+                    <p> The robot is able to climb the ramp but often struggles.</p>
+                    <p> I moved the arduino and breadboard so they are upright to fit the servo onto the body.</p>
+                    <p> This works but also increased the center of gravity.</p>
+                    <p> The servo for the arm often begins to lift off the body so I moved the 9v battery to be stored on top of it to add a force on top of it to hold it down.</p>
+                    <p> -- See sketch 1 and 2</p>
                 </div>
                 <div>
                     <h5> Sketches:</h5>
                     <div class="w3-row-padding w3-padding-16">
                         <div class="gallery">
-                            <img src="images/h6/output-10.png" alt="heli" width="auto" height="auto">
-                            <div class="desc">Idea 1 - heli-ball</div>
+                            <img src="images/h7/Sketch1.png" alt="servo" width="auto" height="auto">
+                            <div class="desc">S1 - Servo no battery</div>
                         </div>
                         <div class="gallery">
-                            <img src="images/h6/output-11.png" alt="golf" width="auto" height="auto">
-                            <div class="desc">Idea 2 - 'golf'</div>
-                        </div>
-                        <div class="gallery">
-                            <img src="images/h6/output-12.png" alt="claw" width="auto" height="auto">
-                            <div class="desc">Idea 3 - claw-bot</div>
-                        </div>
-                        <div class="gallery">
-                            <img src="images/h6/output-14.png" alt="fans" width="auto" height="auto">
-                            <div class="desc">Idea 4 - 'Zephyrus'</div>
-                        </div>
-                        <div class="gallery">
-                            <img src="images/h6/output-7.png" alt="bloon" width="auto" height="auto">
-                            <div class="desc">Idea 5 - hot air bloon</div>
+                            <img src="images/h7/Sketch2.png" alt="battservo" width="auto" height="auto">
+                            <div class="desc">S2 - Arm Servo w/ batt</div>
                         </div>
                     </div>
                 </div>
@@ -156,24 +148,8 @@
                     <h5> Sketches:</h5>
                     <div class="w3-row-padding w3-padding-16">
                         <div class="gallery">
-                            <img src="images/h6/output-10.png" alt="heli" width="auto" height="auto">
-                            <div class="desc">Idea 1 - heli-ball</div>
-                        </div>
-                        <div class="gallery">
-                            <img src="images/h6/output-11.png" alt="golf" width="auto" height="auto">
-                            <div class="desc">Idea 2 - 'golf'</div>
-                        </div>
-                        <div class="gallery">
-                            <img src="images/h6/output-12.png" alt="claw" width="auto" height="auto">
-                            <div class="desc">Idea 3 - claw-bot</div>
-                        </div>
-                        <div class="gallery">
-                            <img src="images/h6/output-14.png" alt="fans" width="auto" height="auto">
-                            <div class="desc">Idea 4 - 'Zephyrus'</div>
-                        </div>
-                        <div class="gallery">
-                            <img src="images/h6/output-7.png" alt="bloon" width="auto" height="auto">
-                            <div class="desc">Idea 5 - hot air bloon</div>
+                            <img src="images/h7/Sketch3.png" alt="arm" width="auto" height="auto">
+                            <div class="desc">Arm being torqued by weight of claw</div>
                         </div>
                     </div>
                 </div>
@@ -181,11 +157,33 @@
 
             <h4> Mechanical Performance</h4>
             <h5> Notes:</h5>
-
+            <p> The robot does pick up the ball well. It is physically able to drive up the ramp.</p>
+            <p> When steering, the motion is discontinuous and difficult to steer.</p>
+            <p> Specifically while going up the ramp, the robot has a tendency to fall off.</p>
+            <p> Sketches below user exp are also somewhat mechancical performance because the idea would help the servos climb up the ramp but also help drivability.</p>
             <h4> User Experience</h4>
             <h5> Notes:</h5>
-
-                
+            <p> The state machine to hold the arm in place functions well.</p>
+            <p> However, there is an issue with it because when the angle is larger, the force is able to rotate all the way around.</p>
+            <p> This gave me the idea to use the arm to help while going up the ramp, the arm can be reoriented to move the COM slightly and help the robot climb.</p>
+            <p> This needs more analysis but I made some sketches below with the arm at 3 different positions:</p>                
+            <div>
+                <h5> Sketches:</h5>
+                <div class="w3-row-padding w3-padding-16">
+                    <div class="gallery">
+                        <img src="images/h7/Sketch4.png" alt="arm" width="20%" height="auto">
+                        <div class="desc">Arm forward to pick up ball</div>
+                    </div>
+                    <div class="gallery">
+                        <img src="images/h7/Sketch5.png" alt="arm" width="20%" height="auto">
+                        <div class="desc">Arm normal to body</div>
+                    </div>
+                    <div class="gallery">
+                        <img src="images/h7/Sketch6.png" alt="arm" width="20%" height="auto">
+                        <div class="desc">Arm fully back</div>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
         <!-- Contact Section -->
