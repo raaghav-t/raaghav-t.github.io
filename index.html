@@ -6,31 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raaghav Thirumaligai</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wsshin/jemdoc_mathjax/jemdoc.css">
+</head>
     <script type="text/javascript" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+<style>
+    /* simple flex‑based two‑column jemdoc layout, mobile‑friendly */
+    #page { display: flex; max-width: 1100px; margin: 0 auto; }
+    #layout-menu { flex: 0 0 220px; padding: 1rem 2rem 2rem 0; }
+    #layout-content { flex: 1 1 auto; padding: 1rem 0; }
+    .menu-category { font-weight: bold; margin: 1rem 0 0.3rem; color: #333; }
+    .menu-item { margin-left: 0.5rem; }
+    .menu-item a { text-decoration: none; }
+    .menu-item a.current { font-weight: bold; text-decoration: underline; }
+    @media (max-width: 768px) {
+        #page { flex-direction: column; }
+        #layout-menu { flex: none; padding: 0 0 1rem 0; border-bottom: 1px solid #ccc; }
+    }
+</style>
+</head>
 
 <body>
+    <div id="page">
+        <aside id="layout-menu">
+            <div class="menu-category">Raaghav</div>
+            <div class="menu-item"><a href="index.html" class="current">Home</a></div>
 
-    <div id="layout-content">
-        <h1>Raaghav Thirumaligai</h1>
-        <p>Mechanical Engineering<br>
+            <div class="menu-category">Projects</div>
+            <div class="menu-item"><a href="me10x/me10site.html">Mech&nbsp;E&nbsp;–&nbsp;10</a></div>
+            <div class="menu-item"><a href="me18/Week_1/week1.html">Mech&nbsp;E&nbsp;–&nbsp;18</a></div>
+            <div class="menu-item"><a href="me127/Notebook.html">Mech&nbsp;E&nbsp;–&nbsp;127</a></div>
+
+            <div class="menu-category">Writing</div>
+            <div class="menu-item"><a href="Writ2E/FP/Portfolio.html">Writ&nbsp;–&nbsp;2E</a></div>
+
+            <div class="menu-category">Contact</div>
+            <div class="menu-item"><a href="mailto:raaghavt@ucsb.edu">Email</a></div>
+        </aside>
+
+        <main id="layout-content">
+            <h1>Raaghav Thirumaligai</h1>
+            <p>Mechanical Engineering<br>
             University of California, Santa Barbara</p>
 
-        <p>Email: <a href="mailto:raaghavt@ucsb.edu">raaghavt@ucsb.edu</a></p>
+            <h2>About</h2>
+            <p>I recently completed my B.S./M.S. in Mechanical Engineering at UCSB. I'm interested in hybrid dynamical systems, wind energy, and electric vehicle design. This site hosts my academic projects, notes, and publications.</p>
 
-        <h2>About</h2>
-        <p>I recently completed my B.S./M.S. in Mechanical Engineering at UCSB, with research interests in hybrid dynamical systems, wind energy, and FSAE electric vehicles. This site hosts my academic projects and course notebooks.</p>
-
-        <h2>Links</h2>
-        <ul>
-            <li><a href="me10x/me10site.html">Mech E - 10</a></li>
-            <li><a href="me18/Week_1/week1.html">Mech E - 18</a></li>
-            <li><a href="Writ2E/FP/Portfolio.html">Writ - 2E</a></li>
-            <li><a href="me127/Notebook.html">Mech E - 127</a></li>
-        </ul>
+            <h2>News</h2>
+            <ul>
+                <li><strong>July&nbsp;2025:</strong> Graduated with B.S./M.S. in Mechanical Engineering.</li>
+                <li><strong>June&nbsp;2025:</strong> Presented FSAE EV accumulator box design at competition.</li>
+            </ul>
+        </main>
     </div>
-
 </body>
 
 </html>
