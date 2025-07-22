@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,50 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raaghav Thirumaligai</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wsshin/jemdoc_mathjax/jemdoc.css">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&amp;display=swap" rel="stylesheet">
     <script type="text/javascript" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</head>
-<style>
-    /* simple flex‑based two‑column jemdoc layout, mobile‑friendly */
-    #page { display: flex; max-width: 1100px; margin: 0 auto; }
-    #layout-menu { flex: 0 0 220px; padding: 1rem 2rem 2rem 0; }
-    #layout-content { flex: 1 1 auto; padding: 1rem 0; }
-    .menu-category { font-weight: bold; margin: 1rem 0 0.3rem; color: #333; }
-    .menu-item { margin-left: 0.5rem; }
-    .menu-item a { text-decoration: none; }
-    .menu-item a.current { font-weight: bold; text-decoration: underline; }
-    @media (max-width: 768px) {
-        #page { flex-direction: column; }
-        #layout-menu { flex: none; padding: 0 0 1rem 0; border-bottom: 1px solid #ccc; }
-    }
-    /* Extra styling to match jemdoc look */
-    #layout-menu {
-        background: #f5f5f5;
-        border-right: 1px solid #ccc;
-    }
-    #layout-menu a { color: #003366; }
-    #layout-menu a:hover { text-decoration: underline; }
-    #toptitle h1 {
-        font-size: 1.6em;
-        margin: 0 0 0.3em 0;
-        padding-bottom: 0.2em;
-        border-bottom: 1px solid #ccc;
-    }
-</style>
-  /* Profile picture styling */
-  .profile-pic {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-right: 1rem;
-      float: left;
-  }
-  #toptitle {
-      overflow: auto;
-      margin-bottom: 1rem;
-  }
+    <style>
+        /* simple flex-based two-column jemdoc layout, mobile-friendly */
+        #page { display: flex; max-width: 1100px; margin: 0 auto; }
+        #layout-menu { flex: 0 0 220px; padding: 1rem 2rem 2rem 0; }
+        #layout-content { flex: 1 1 auto; padding: 1rem 0; }
+        .menu-category { font-weight: bold; margin: 1rem 0 0.3rem; color: #333; }
+        .menu-item { margin-left: 0.5rem; }
+        .menu-item a { text-decoration: none; }
+        .menu-item a.current { font-weight: bold; text-decoration: underline; }
+        @media (max-width: 768px) {
+            #page { flex-direction: column; }
+            #layout-menu { flex: none; padding: 0 0 1rem 0; border-bottom: 1px solid #ccc; }
+        }
+        /* Extra styling to match jemdoc look */
+        body {
+            background: #f6f3ff;
+            font-family: 'Nunito', sans-serif;
+            color: #333;
+        }
+        #layout-menu {
+            background: #ebe6ff;
+            border-right: 1px solid #ccc;
+        }
+        #layout-menu a { color: #4d6fa5; }
+        #layout-menu a:hover { text-decoration: underline; }
+        h2 { color: #4a406e; }
+        #toptitle h1 {
+            font-size: 1.6em;
+            margin: 0 0 0.3em 0;
+            padding-bottom: 0.2em;
+            border-bottom: 1px solid #ccc;
+        }
+        /* Profile picture styling */
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 1rem;
+            float: left;
+        }
+        #toptitle {
+            overflow: auto;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -64,13 +68,16 @@
             <div class="menu-item"><a href="me127/Notebook.html">Mech&nbsp;E&nbsp;–&nbsp;127</a></div>
             <div class="menu-item"><a href="Writ2E/FP/Portfolio.html">Writ&nbsp;–&nbsp;2E</a></div>
 
+            <div class="menu-category">Projects</div>
+            <div class="menu-item"><a href="#projects">Slides</a></div>
+
             <div class="menu-category">Contact</div>
             <div class="menu-item"><a href="mailto:raaghavt@ucsb.edu">Email</a></div>
         </aside>
 
         <main id="layout-content">
             <div id="toptitle">
-                <img src="images/profile.jpg" alt="Raaghav Thirumaligai" class="profile-pic" />
+                <img src="images/pfp.jpeg" alt="Raaghav Thirumaligai" class="profile-pic" />
                 <h1>Raaghav Thirumaligai<br /></h1>
             </div>
             <p>Mechanical Engineering<br>
@@ -120,6 +127,11 @@
 
             <h2>Interests</h2>
             <p>Cycling on a Specialized Allez, following Formula&nbsp;1 (long‑time AlphaTauri/VCARB fan), and indie gaming—especially <em>Celeste</em>.</p>
+
+            <h2 id="projects">Projects</h2>
+            <ul>
+                <li><a href="projects/thing.pdf" target="_blank">Sample Project Slide</a></li>
+            </ul>
 
             <h2>News</h2>
             <ul>
