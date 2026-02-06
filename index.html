@@ -83,6 +83,20 @@
     .subtitle { font-size: 1.05em; color: #555; margin-top: 0.2rem; line-height: 1.25em; }
     .profile-pic { float: none; margin: 0; }
     </style>
+    <script>
+        // Host-based Gmail shortcuts so Safari autocomplete stays fast
+        (function () {
+            var host = window.location.hostname.toLowerCase();
+            var redirects = {
+                "sma.raaghavt.com": "https://mail.google.com/mail/u/1/#inbox",
+                "rma.raaghavt.com": "https://mail.google.com/mail/u/0/#inbox"
+            };
+            var target = redirects[host];
+            if (target && window.location.href !== target) {
+                window.location.replace(target);
+            }
+        }());
+    </script>
 </head>
 
 <body>
