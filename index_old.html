@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raaghav Thirumaligai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f4f7ff;
+      --panel: #ffffff;
+      --ink: #0f1a2d;
+      --muted: #5f6d87;
+      --line: #d9e0f0;
+      --brand: #1164e7;
+      --brand-soft: #d8e8ff;
+      --accent: #14b8a6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 5%, #dbe7ff 0 20%, transparent 40%),
+        radial-gradient(circle at 92% 15%, #d7fff7 0 12%, transparent 35%),
+        var(--bg);
+      line-height: 1.55;
+    }
+
+    #page {
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+      max-width: 1240px;
+      margin: 0 auto;
+      min-height: 100vh;
+      gap: 22px;
+      padding: 22px;
+    }
+
+    #layout-menu {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px 16px;
+      position: sticky;
+      top: 20px;
+      height: fit-content;
+      box-shadow: 0 10px 30px rgba(22, 51, 102, 0.08);
+    }
+
+    .menu-category {
+      font-family: "Space Grotesk", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin: 14px 0 8px;
+    }
+
+    .menu-item {
+      margin: 0 0 8px;
+      padding-left: 6px;
+      border-left: 2px solid transparent;
+    }
+
+    .menu-item a {
+      text-decoration: none;
+      color: #243350;
+      font-weight: 600;
+    }
+
+    .menu-item a:hover,
+    .menu-item a.current {
+      color: var(--brand);
+    }
+
+    details {
+      margin-top: 8px;
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    #layout-content {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 12px 32px rgba(17, 32, 64, 0.08);
+    }
+
+    #toptitle {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .profile-pic {
+      width: 112px;
+      height: 112px;
+      border-radius: 22px;
+      object-fit: cover;
+      border: 3px solid #fff;
+      box-shadow: 0 8px 22px rgba(39, 70, 130, 0.25);
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.9rem, 4vw, 2.5rem);
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 1.01rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .pill {
+      background: var(--brand-soft);
+      color: #123b8d;
+      border: 1px solid #bfd6ff;
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 0.83rem;
+      font-weight: 700;
+    }
+
+    h2 {
+      margin: 22px 0 10px;
+      font-size: 1.2rem;
+      font-family: "Space Grotesk", sans-serif;
+      letter-spacing: -0.01em;
+    }
+
+    ul {
+      margin-top: 8px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .timeline {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .timeline li {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      padding: 10px 0;
+      border-bottom: 1px dashed #dde5f3;
+    }
+
+    .timeline li:last-child {
+      border-bottom: none;
+    }
+
+    .role {
+      font-weight: 700;
+    }
+
+    .dates {
+      color: var(--muted);
+      white-space: nowrap;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 8px;
+    }
+
+    a {
+      color: var(--brand);
+    }
+
+    @media (max-width: 940px) {
+      #page {
+        grid-template-columns: 1fr;
+        padding: 12px;
+      }
+
+      #layout-menu {
+        position: static;
+      }
+
+      #layout-content {
+        padding: 20px;
+      }
+
+      .timeline li {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
+  </style>
+  <script>
+    (function () {
+      var host = window.location.hostname.toLowerCase();
+      var redirects = {
+        "sma.raaghavt.com": "https://mail.google.com/mail/u/1/#inbox",
+        "rma.raaghavt.com": "https://mail.google.com/mail/u/0/#inbox"
+      };
+      var target = redirects[host];
+      if (target && window.location.href !== target) {
+        window.location.replace(target);
+      }
+    }());
+  </script>
+</head>
+
+<body>
+  <div id="page">
+    <aside id="layout-menu">
+      <div class="menu-category">Raaghav</div>
+      <div class="menu-item"><a href="index.html" class="current">Home</a></div>
+      <div class="menu-item"><a href="cv_RaaghavThirumaligai.pdf" target="_blank" rel="noopener">CV (PDF)</a></div>
+      <div class="menu-item"><a href="index_glass.html">Glass Version</a></div>
+
+      <details open>
+        <summary class="menu-category">Classes</summary>
+        <div class="menu-item"><a href="me10x/me10site.html">Mech E - 10</a></div>
+        <div class="menu-item"><a href="me18/Week_1/week1.html">Mech E - 18</a></div>
+        <div class="menu-item"><a href="me127/Notebook.html">Mech E - 127</a></div>
+        <div class="menu-item"><a href="Writ2E/FP/Portfolio.html">Writ - 2E</a></div>
+      </details>
+
+      <details open>
+        <summary class="menu-category">Projects</summary>
+        <div class="menu-item"><a href="#projects">Highlighted Work</a></div>
+      </details>
+
+      <div class="menu-category">Contact</div>
+      <div class="menu-item"><a href="mailto:rthirumaligai@gmail.com">rthirumaligai@gmail.com</a></div>
+      <div class="menu-item"><a href="mailto:raaghavt@icloud.com">raaghavt@icloud.com</a></div>
+    </aside>
+
+    <main id="layout-content">
+      <div id="toptitle">
+        <img src="images/pfp.jpeg" alt="Raaghav Thirumaligai" class="profile-pic" />
+        <div class="title-texts">
+          <h1>Raaghav Thirumaligai</h1>
+          <div class="subtitle">Mechanical Engineer | Controls, Automation, and Mechatronic Systems</div>
+          <div class="pill-row">
+            <span class="pill">UCSB PhD (Projected Jun 2029)</span>
+            <span class="pill">M.S. Mechanical Engineering, 2025</span>
+            <span class="pill">FSAE EV Systems</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>Objective</h2>
+      <p>Controls-focused mechanical engineer with hands-on mechatronics and vehicle systems experience. I build model-based controllers and estimation pipelines in MATLAB/Simulink, then connect them to robust hardware instrumentation and automation workflows using Python and Arduino-based data acquisition.</p>
+      <p class="note">Current focus: controls and automation internship roles in the Bay Area across model-based design, control theory, and real-time systems.</p>
+
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Ph.D., Mechanical Engineering</strong> - University of California, Santa Barbara (Projected Jun 2029), GPA 3.91/4.0, research interest in control theory.</li>
+        <li><strong>M.S., Mechanical Engineering</strong> - University of California, Santa Barbara (Jul 2025), GPA 3.90/4.0, project on clogging of fiber suspensions at constrictions.</li>
+        <li><strong>B.S., Mechanical Engineering</strong> - University of California, Santa Barbara (Jun 2025), GPA 3.76/4.0, capstone on a 600V vehicle battery container.</li>
+      </ul>
+
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Controls:</strong> State-space linear systems, Lyapunov stability, LQR/LQG, MIMO analysis, robust control, and hybrid systems.</li>
+        <li><strong>Optimization & Estimation:</strong> Model predictive control, finite-horizon methods, observers, Kalman filtering, and sensor calibration.</li>
+        <li><strong>Programming:</strong> MATLAB/Simulink, Python, Arduino, Git.</li>
+        <li><strong>Mechanical:</strong> SolidWorks, Fusion 360, GD&amp;T, assemblies, drawings, FEA.</li>
+        <li><strong>Fabrication:</strong> Waterjet/laser workflows, sheet metal, fixtures, and 3D printing (FDM/SLA).</li>
+      </ul>
+
+      <h2 id="projects">Selected Projects</h2>
+      <ul class="timeline">
+        <li>
+          <div><span class="role">Inverted Pendulum on Cart (MATLAB/Simulink)</span><br />Implemented state-machine control with energy-based swing-up and LQR/LQG balancing and catch behavior; identified linear models with sine-sweep experiments and System Identification workflows.</div>
+          <div class="dates">Apr 2025 - Jun 2025</div>
+        </li>
+        <li>
+          <div><span class="role">Gaucho Racing Formula SAE EV</span><br />4-year vehicle systems contributor and VP; led accumulator-container design/build (600V), braking hardware work, and experimental validation activities.</div>
+          <div class="dates">Aug 2021 - Jun 2025</div>
+        </li>
+        <li>
+          <div><span class="role">Automated Clog Detection Testbed</span><br />Prototyped vision-based clog detection from rolling brightness metrics and integrated it with Python scripts for automated logging and resets.</div>
+          <div class="dates">Jul 2024 - Oct 2025</div>
+        </li>
+      </ul>
+
+      <h2>Research Experience</h2>
+      <ul class="timeline">
+        <li>
+          <div><span class="role">Research Assistant, Biological Control Lab (UCSB)</span><br />Co-developed a control-oriented model for genome-wide transcription coupled to DNA supercoiling; co-author on manuscript accepted in Jan 2026 (preprint: 10.1101/2025.05.26.655193).</div>
+          <div class="dates">Jan 2025 - Jan 2026</div>
+        </li>
+        <li>
+          <div><span class="role">Master's Project, M&amp;M Flow Lab (UCSB)</span><br />Studied clogging dynamics in particle-laden suspensions and built a vision-based event detector for experiment logging and post-analysis; presented at APS DFD (Nov 2024).</div>
+          <div class="dates">Aug 2024 - Jun 2025</div>
+        </li>
+        <li>
+          <div><span class="role">Undergraduate Researcher, M&amp;M Flow Lab (UCSB)</span><br />Designed an instrumented annular shear cell and built an Arduino-MATLAB calibration/data-acquisition workflow for repeatable strain-gauge experiments.</div>
+          <div class="dates">Jan 2023 - Aug 2024</div>
+        </li>
+        <li>
+          <div><span class="role">Undergraduate Researcher, Fluid Energy Science Lab (UCSB)</span><br />Built experimental annuli to simulate kite systems and supported wake-model verification in wind-tunnel testing with custom DAQ tooling.</div>
+          <div class="dates">Jun 2023 - Oct 2023</div>
+        </li>
+      </ul>
+
+      <h2>Teaching and Work</h2>
+      <ul class="timeline">
+        <li>
+          <div><span class="role">Teaching Assistant, UCSB Mechanical Engineering</span><br />Supported Vibrations, Mechanical Engineering Laboratory, Dynamics, Fluids, and bio-inspired design courses through grading, labs, and office hours.</div>
+          <div class="dates">Apr 2024 - Present</div>
+        </li>
+        <li>
+          <div><span class="role">Resident Assistant, San Rafael Residence Hall</span><br />Managed student support, conflict resolution, and event planning in a high-traffic dorm setting.</div>
+          <div class="dates">Aug 2022 - Jun 2023</div>
+        </li>
+        <li>
+          <div><span class="role">GameMaster, Diablo Escapes VR</span><br />Guided players through VR escape rooms and troubleshot hardware/software issues in real time.</div>
+          <div class="dates">Jul 2020 - Aug 2022</div>
+        </li>
+      </ul>
+
+      <h2>Honors</h2>
+      <ul>
+        <li>Undergraduate Engineering Honors Program (Sep 2023 - Jun 2024).</li>
+        <li>Dean's Honors (College of Engineering), five quarters.</li>
+        <li>Undergraduate Research Awards x2: $3,750 (2024) and $2,500 (2025).</li>
+      </ul>
+
+      <h2>Links</h2>
+      <ul>
+        <li><a href="cv_RaaghavThirumaligai.pdf" target="_blank" rel="noopener">Download CV (Updated March 1, 2026)</a></li>
+        <li><a href="projects/thing.pdf" target="_blank" rel="noopener">Sample Project Slide</a></li>
+      </ul>
+    </main>
+  </div>
+</body>
+
+</html>

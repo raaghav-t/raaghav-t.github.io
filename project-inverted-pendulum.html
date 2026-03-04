@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inverted Pendulum Project | Raaghav Thirumaligai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/glass.css" />
+</head>
+
+<body>
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob a"></div>
+    <div class="blob b"></div>
+    <div class="blob c"></div>
+  </div>
+
+  <div class="shell">
+    <aside class="nav glass">
+      <img src="images/pfp.webp" alt="Raaghav Thirumaligai" class="avatar" />
+      <div class="name">Raaghav Thirumaligai</div>
+      <div class="muted">Mechanical Engineer</div>
+      <div class="muted">Control Theory + Automation</div>
+      <a href="index.html">Home</a>
+      <a href="cv_RaaghavThirumaligai.pdf" target="_blank" rel="noopener">Open CV (PDF)</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="research.html">Research</a>
+      <a href="mailto:rthirumaligai@gmail.com">Email</a>
+    </aside>
+
+    <main class="content glass">
+      <section class="hero glass">
+        <h1>Inverted Pendulum on Cart</h1>
+        <p>ME155C final project focused on full-state behavior control: swing-up from the hanging equilibrium, robust balancing around upright, and controlled catching back to downward equilibrium using a state-machine architecture.</p>
+      </section>
+
+      <section class="grid">
+        <article class="card glass span-7">
+          <h2>System + Objectives</h2>
+          <div class="filler">
+            Hardware setup: cart-actuated pendulum with encoder feedback for both pendulum angle and cart position. A single motor drives the cart, and the rod is pinned to the cart with asymmetric mass distribution.
+          </div>
+          <div class="filler">
+            Primary control objectives:
+            <ul class="clean">
+              <li>Stabilize the downward equilibrium for repeatable catch/reset behavior.</li>
+              <li>Stabilize the upward (inverted) equilibrium for balancing.</li>
+              <li>Switch reliably between these equilibria through a state machine.</li>
+            </ul>
+          </div>
+          <div class="filler">
+            Identification workflow:
+            <ul class="clean">
+              <li>Logarithmic sine sweep excitation in approximately 0.3 to 3 Hz range.</li>
+              <li>`tfest` run across 30 experiments to estimate linear models.</li>
+              <li>Cart modeled with an assumed integrator + voltage-to-velocity fit.</li>
+              <li>Model structures used: cart (2 poles, 1 zero), pendulum (3 poles, 2 zeros).</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card glass span-5">
+          <h2>Controller Architecture</h2>
+          <div class="filler">
+            <strong>Initialization:</strong> uses gravity-aligned calibration for accurate angle reference, especially near the inverted target state.
+          </div>
+          <div class="filler">
+            <strong>Swing-Up:</strong> energy injection around zero crossings by moving cart opposite angular velocity direction, with proportional position regulation and activation near ±30 degrees.
+          </div>
+          <div class="filler">
+            <strong>Balancing:</strong> enters near upright (about ±23 degrees) using LQR/LQG around the unstable equilibrium to regulate angle and cart position.
+          </div>
+          <div class="filler">
+            <strong>Catching:</strong> engages as pendulum falls (about ±90 degrees window) using LQR/LQG about the stable downward equilibrium to reset into a predictable next swing-up cycle.
+          </div>
+        </article>
+
+        <article class="card glass span-7">
+          <h2>Performance + Lessons</h2>
+          <div class="filler">
+            The state-machine design produced consistent behavior across swing-up, balance, and catch phases while reducing chaotic resets. Tuning focused on robust transitions and preserving controllability near region boundaries.
+          </div>
+          <div class="filler">
+            Key practical insight: transition logic was as important as controller gains. Good region definitions and fail-safe transitions significantly improved repeatability.
+          </div>
+        </article>
+
+        <article class="card glass span-5">
+          <h2>Project Assets</h2>
+          <div class="img-slot">Add setup photo, block diagram, or response plots here</div>
+          <div class="preview-link" href="assets/docs/projects/inverted-pendulum/ME155C_Final_Project_Presentation_2.pdf" >
+            <a> Open Final Presentation (PDF)</a>
+          </div>
+          <div class="filler">
+            Future work listed in the presentation:
+            <ul class="clean">
+              <li>Add correction term for steady-state error.</li>
+              <li>Improve failure detection and robust fallback logic.</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/glass.js"></script>
+</body>
+
+</html>

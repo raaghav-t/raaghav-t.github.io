@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Raaghav Thirumaligai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/glass.css" />
+</head>
+
+<body>
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob a"></div>
+    <div class="blob b"></div>
+    <div class="blob c"></div>
+  </div>
+
+  <div class="shell">
+    <aside class="nav glass">
+      <img src="images/pfp.webp" alt="Raaghav Thirumaligai" class="avatar" />
+      <div class="name">Raaghav Thirumaligai</div>
+      <div class="muted">Mechanical Engineer</div>
+      <div class="muted">Control Theory + Automation</div>
+      <a href="index.html">Home</a>
+      <a href="cv_RaaghavThirumaligai.pdf" target="_blank" rel="noopener">Open CV (PDF)</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="research.html">Research</a>
+      <a href="mailto:rthirumaligai@gmail.com">Email</a>
+    </aside>
+
+    <main class="content glass">
+      <section class="hero glass">
+        <h1>Projects</h1>
+        <p>This page is the hub for all project writeups. Each preview links to a dedicated project page in the same liquid-glass format, ready for deep technical breakdowns, figures, and results.</p>
+      </section>
+
+      <section class="grid">
+        <article class="card glass span-7">
+          <h2>Project Previews</h2>
+          <a class="preview-link" href="project-inverted-pendulum.html">
+            <h3>Inverted Pendulum on Cart (Matlab/Simulink)</h3>
+            <p>State-machine controller with swing-up + LQR/LQG balancing/catch; linear system ID via sine sweeps.</p>
+            <div class="when">Apr 2025 - Jun 2025</div>
+          </a>
+          <a class="preview-link" href="project-gaucho-racing.html">
+            <h3>Gaucho Racing Formula SAE EV</h3>
+            <p>Vehicle systems leadership, braking system engineering, and 600V accumulator container capstone design/builds.</p>
+            <div class="when">Aug 2021 - Jun 2025</div>
+          </a>
+          <a class="preview-link" href="project-clog-detection.html">
+            <h3>Automated Clog Detection Testbed</h3>
+            <p>Python + vision pipeline for real-time occlusion detection and automated event logging/reset actions.</p>
+            <div class="when">Jul 2024 - Oct 2025</div>
+          </a>
+        </article>
+
+        <article class="card glass span-5">
+          <h2>Image Space</h2>
+          <div class="img-slot">Project collage / hero image placeholder</div>
+          <p class="muted">Use this panel for a featured project photo, schematic, or animation preview.</p>
+        </article>
+
+        <article class="card glass span-12">
+          <h2>Notes</h2>
+          <div class="filler">Filler space: add your project selection logic, update cadence, and where to find source files, demos, and publications.</div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/glass.js"></script>
+</body>
+
+</html>

@@ -1,215 +1,119 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raaghav Thirumaligai</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wsshin/jemdoc_mathjax/jemdoc.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&amp;display=swap" rel="stylesheet">
-    <script type="text/javascript" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        /* simple flex-based two-column jemdoc layout, mobile-friendly */
-        #page { display: flex; width: 100%; max-width: 1200px; margin: 0; }
-        #layout-menu { flex: 0 0 200px; padding: 1rem 1.2rem 2rem 1rem; }
-        #layout-content { flex: 1 1 auto; padding: 1rem 0; }
-        .menu-category { font-weight: bold; margin: 1rem 0 0.3rem; color: #333; }
-        .menu-item { margin-left: 0.5rem; }
-        .menu-item a { text-decoration: none; }
-        .menu-item a.current { font-weight: bold; text-decoration: underline; }
-        @media (max-width: 768px) {
-            #page { flex-direction: column; }
-            #layout-menu { flex: none; padding: 0 0 1rem 0; border-bottom: 1px solid #ccc; }
-        }
-        @media (min-width: 1400px) {
-            #page { max-width: 1400px; }
-            #layout-menu { flex-basis: 180px; }
-        }
-        /* Extra styling to match jemdoc look */
-        body {
-            margin: 0;
-            background: #f6f3ff;
-            font-family: 'Nunito', sans-serif;
-            color: #333;
-        }
-        #layout-menu {
-            background: #ebe6ff;
-            border-right: 1px solid #ccc;
-        }
-        #layout-menu a { color: #4d6fa5; }
-        #layout-menu a:hover { text-decoration: underline; }
-        p {
-            padding-left: 0.5em;
-        }
-        h2 { 
-            color: #4a406e; 
-            padding-left: 0.5em;
-        }
-        #toptitle h1 {
-            font-size: 1.6em;
-            margin: 0 0 0.3em 0;
-            padding-bottom: 0.2em;
-            border-bottom: 1px solid #ccc;
-        }
-        /* Profile picture styling */
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-right: 1rem;
-            float: left;
-            padding: 0.5rem; /* New line added for padding */
-            background-color: rgba(255, 0, 4, 0.5); /* Optional: makes padding visible if image has transparency */
-        }
-        #toptitle {
-            overflow: auto;
-            margin-bottom: 1rem;
-        }
-    /* aligned dates in experience list */
-    .exp-list li {
-        display: flex;
-        justify-content: space-between;
-        gap: 0.5rem;
-        margin-bottom: 0.4rem;
-    }
-    .exp-role { flex: 1; }
-    .exp-dates { white-space: nowrap; color: #555; font-style: italic; }
-
-    /* title block tweaks */
-    #toptitle { display: flex; align-items: center; gap: 1rem; overflow: visible; }
-    #toptitle h1 { border-bottom: none; margin: 0; }
-    .title-texts { display: flex; flex-direction: column; }
-    .subtitle { font-size: 1.05em; color: #555; margin-top: 0.2rem; line-height: 1.25em; }
-    .profile-pic { float: none; margin: 0; }
-    </style>
-    <script>
-        // Host-based Gmail shortcuts so Safari autocomplete stays fast
-        (function () {
-            var host = window.location.hostname.toLowerCase();
-            var redirects = {
-                "sma.raaghavt.com": "https://mail.google.com/mail/u/1/#inbox",
-                "rma.raaghavt.com": "https://mail.google.com/mail/u/0/#inbox"
-            };
-            var target = redirects[host];
-            if (target && window.location.href !== target) {
-                window.location.replace(target);
-            }
-        }());
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raaghav Thirumaligai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/glass.css" />
 </head>
 
 <body>
-    <div id="page">
-        <aside id="layout-menu">
-            <div class="menu-category">Raaghav</div>
-            <div class="menu-item"><a href="index.html" class="current">Home</a></div>
-            <div class="menu-item"><a href="cv.html">CV</a></div>
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob a"></div>
+    <div class="blob b"></div>
+    <div class="blob c"></div>
+  </div>
 
-            <details open>
-              <summary class="menu-category">Classes</summary>
-              <div class="menu-item"><a href="me10x/me10site.html">Mech&nbsp;E&nbsp;–&nbsp;10</a></div>
-              <div class="menu-item"><a href="me18/Week_1/week1.html">Mech&nbsp;E&nbsp;–&nbsp;18</a></div>
-              <div class="menu-item"><a href="me127/Notebook.html">Mech&nbsp;E&nbsp;–&nbsp;127</a></div>
-              <div class="menu-item"><a href="Writ2E/FP/Portfolio.html">Writ&nbsp;–&nbsp;2E</a></div>
-            </details>
+  <div class="shell">
+    <aside class="nav glass">
+      <img src="images/pfp.webp" alt="Raaghav Thirumaligai" class="avatar" />
+      <div class="name">Raaghav Thirumaligai</div>
+      <div class="muted">Mechanical Engineer</div>
+      <div class="muted">Control Theory + Automation </div>
+      <a href="index.html" class="active">Home</a>
+      <a href="cv_RaaghavThirumaligai.pdf" target="_blank" rel="noopener">Open CV (PDF)</a>
+      <a href="projects.html">Projects</a>
+      <a href="research.html">Research</a>
+      <a href="mailto:rthirumaligai@gmail.com">Email</a>
+    </aside>
 
-            <details open>
-              <summary class="menu-category">Projects</summary>
-              <div class="menu-item"><a href="#projects">Slides</a></div>
-            </details>
+    <main class="content glass">
+      <section class="hero glass">
+        <h1>Aspriring Control Theorist</h1>
+        <p>Controls-focused mechanical engineer currently pursuing a Ph.D. at UCSB, with hands-on experience in model-based control, experimental automation, and Formula SAE EV systems.</p>
+        <div class="kpis">
+          <div class="kpi"><strong>3.91</strong><span>Ph.D. GPA</span></div>
+          <div class="kpi"><strong>13 Courses</strong><span> Taken in Controls </span></div>
+          <div class="kpi"><strong>2029</strong><span>Expected PhD Completion</span></div>
+        </div>
+      </section>
 
-            <div class="menu-category">Contact</div>
-            <div class="menu-item"><a href="mailto:raaghavt@icloud.com">Email</a></div>
-        </aside>
+      <section class="grid">
+        <article class="card glass span-7">
+          <h2>Project Previews</h2>
+          <a class="preview-link" href="project-inverted-pendulum.html">
+            <h3>Inverted Pendulum on Cart (Matlab/Simulink)</h3>
+            <p>State-machine controller with swing-up + LQR/LQG balancing/catch; linear system ID via sine sweeps.</p>
+            <div class="when">Apr 2025 - Jun 2025</div>
+          </a>
+          <a class="preview-link" href="project-gaucho-racing.html">
+            <h3>Gaucho Racing Formula SAE EV</h3>
+            <p>Vehicle systems leadership, braking system engineering, and 600V accumulator container capstone design/builds.</p>
+            <div class="when">Aug 2021 - Jun 2025</div>
+          </a>
+          <a class="preview-link" href="project-clog-detection.html">
+            <h3>Automated Clog Detection Testbed</h3>
+            <p>Python + vision pipeline for real-time occlusion detection and automated event logging/reset actions.</p>
+            <div class="when">Jul 2024 - Oct 2025</div>
+          </a>
+        </article>
+        <article class="card glass span-5">
+          <h2>Technical Stack</h2>
+          <span class="tag">MATLAB</span>
+          <span class="tag">Simulink</span>
+          <span class="tag">Model Predictive Control</span>
+          <span class="tag">Python</span>
+          <span class="tag">Kalman Filtering</span>
+          <span class="tag">LQR/LQG</span>
+          <span class="tag">Nonlinear Control</span>
+          <span class="tag">Robust Control</span>
+          <span class="tag">Game Theory</span>
+          <span class="tag">Arduino DAQ</span>
+          <span class="tag">SolidWorks</span>
+          <span class="tag">Hybrid Control</span>
+          <span class="tag">FEA</span>
+          <span class="tag">3D Printing</span>
+        </article>
 
-        <main id="layout-content">
-            <div id="toptitle">
-                <img src="images/pfp.jpeg" alt="Raaghav Thirumaligai" class="profile-pic" />
-                <div class="title-texts">
-                    <h1>Raaghav Thirumaligai</h1>
-                    <div class="subtitle">
-                        Mechanical Engineering<br>
-                        University of California, Santa Barbara
-                    </div>
-                </div>
-            </div>
+        <article class="card glass span-5" id="research">
+          <h2>Research</h2>
+          <ul class="clean">
+            <li><strong>Biological Control Lab (UCSB):</strong> Control-oriented transcription/supercoiling modeling; co-author on accepted manuscript (Jan 2026), <a class="inline" href="https://www.biorxiv.org/content/10.1101/2025.05.26.655193v1.abstract"> preprint on arxiv</a></li>
+            <li><strong>M&amp;M Flow Lab:</strong> Clogging dynamics and vision-based event detection for particle-laden flow experiments.</li>
+            <li><strong>Fluid Energy Science Lab:</strong> Wind-tunnel data collection and custom Arduino-MATLAB DAQ systems for wake studies.</li>
+          </ul>
+        </article>
 
-            <h2>About</h2>
-            <p>I’m passionate about controls, fluid dynamics, and renewable‑energy systems. Having just completed the combined B.S./M.S. program in Mechanical Engineering at UCSB, I am preparing to begin a Ph.D. at UCSB in Fall 2025 focusing on control of fluid‑mechanical systems. Outside the lab I build electric race‑cars with Gaucho Racing and enjoy mentoring younger engineers.</p>
+        <article class="card glass span-7">
+          <h2>Education + Experience</h2>
+          <ul class="clean">
+            <li><strong>UCSB Ph.D. Mechanical Engineering</strong> (Jun '29), GPA 3.91.</li>
+            <li><strong>UCSB M.S. Mechanical Engineering</strong> (Jul '25), GPA 3.90.</li>
+            <li><strong>UCSB B.S. Mechanical Engineering</strong> (Jun '25), GPA 3.76.</li>
+            <li><strong>Teaching Assistant, UCSB</strong> (Apr 2024 - Present): Vibrations, Dynamics, Fluids, and Laboratory instruction support.</li>
+            <li><strong>Resident Assistant, UCSB</strong> (Aug 2022 - Jun 2023).</li>
+            <li><strong>GameMaster, Diablo Escapes VR</strong> (Jul 2020 - Aug 2022).</li>
+          </ul>
+        </article>
 
-            <h2>Education</h2>
-            <ul>
-                <li><strong>M.S. Mechanical Engineering</strong>, UC Santa Barbara, 2025</li>
-                <li><strong>B.S. Mechanical Engineering</strong>, UC Santa Barbara, 2025</li>
-            </ul>
+        <article class="card glass span-12">
+          <h2>Contact + Links</h2>
+          <p>
+            Email: <a class="inline" href="mailto:rthirumaligai@gmail.com">rthirumaligai@gmail.com</a> |
+            Alternate: <a class="inline" href="mailto:raaghavt@icloud.com">raaghavt@icloud.com</a> |
+            <a class="inline" href="cv_RaaghavThirumaligai.pdf" target="_blank" rel="noopener">Full CV (PDF)</a>
+          </p>
+          <div class="footer">Last CV update reflected: March 1, 2026</div>
+        </article>
+      </section>
+    </main>
+  </div>
 
-            <h2>Experience</h2>
-            <ul class="exp-list">
-                <li>
-                    <span class="exp-role"><strong>Undergraduate Researcher</strong>, UCSB Multiscale &amp; Multiphase Flow Lab</span>
-                    <span class="exp-dates">Mar 2023 – Present</span>
-                </li>
-                <li>
-                    <span class="exp-role"><strong>Course/Undergraduate Reader (TA)</strong>, ME 16 Dynamics</span>
-                    <span class="exp-dates">Apr 2024 – Jun 2024</span>
-                </li>
-                <li>
-                    <span class="exp-role"><strong>Vice President &amp; Battery Accumulator Lead</strong>, Gaucho Racing FSAE EV</span>
-                    <span class="exp-dates">Jun 2023 – Jun 2024</span>
-                </li>
-                <li>
-                    <span class="exp-role"><strong>Senior Capstone Project</strong>, Formula SAE Electric Vehicle (Accumulator &amp; HV Systems)</span>
-                    <span class="exp-dates">2024 – 2025</span>
-                </li>
-            </ul>
-
-            <h2>Additional Experience</h2>
-            <ul class="exp-list">
-                <li>
-                    <span class="exp-role"><strong>Resident Assistant</strong>, San Rafael Residence Hall</span>
-                    <span class="exp-dates">Aug 2022 – Jun 2023</span>
-                </li>
-                <li>
-                    <span class="exp-role"><strong>Game Master</strong>, Diablo Escapes VR</span>
-                    <span class="exp-dates">Jul 2020 – Aug 2022</span>
-                </li>
-            </ul>
-
-            <h2>Skills</h2>
-            <ul>
-                <li>Vehicle mechanical design &amp; accumulator container integration (FSAE EV)</li>
-                <li>Experimental instrumentation, automation, and root‑cause analysis</li>
-                <li>3D CAD (SolidWorks, Fusion 360) &amp; FEA simulation</li>
-                <li>MATLAB / Simulink modeling and control design</li>
-                <li>LabVIEW data‑acquisition programming</li>
-                <li>Rapid prototyping: FDM/SLA printing, water‑jet, laser‑cutting, sheet‑metal</li>
-                <li>Python ML frameworks (PyTorch, TensorFlow)</li>
-            </ul>
-
-            <h2>Honors&nbsp;&amp;&nbsp;Awards</h2>
-            <ul>
-                <li>Undergraduate Engineering Honors Program, 2023-2024</li>
-                <li>Dean’s Honors List (College of Engineering) — five quarters</li>
-                <li>Undergraduate Research Awards — $3,750 (2024) &amp; $2,500 (2025)</li>
-            </ul>
-
-            <h2>Interests</h2>
-            <p>Cycling on a Specialized Allez, following Formula&nbsp;1 (long‑time AlphaTauri/VCARB fan), and indie gaming—especially <em>Celeste</em>.</p>
-
-            <h2 id="projects">Projects</h2>
-            <ul>
-                <li><strong>Active Reconfigurable Wind Turbine (ARWT)</strong> — NSF GRFP proposal concept (2024–2025)</li>
-                <li><a href="projects/thing.pdf" target="_blank">Sample Project Slide</a></li>
-            </ul>
-
-            <h2>News</h2>
-            <ul>
-                <li><strong>July&nbsp;2025:</strong> Graduated with B.S./M.S. in Mechanical Engineering.</li>
-                <li><strong>June&nbsp;2025:</strong> Presented FSAE EV accumulator box design at engineering design fair.</li>
-            </ul>
-        </main>
-    </div>
+  <script src="assets/js/glass.js"></script>
 </body>
 
 </html>
