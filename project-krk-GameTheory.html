@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>King + Rook vs King Endgame Solver | Raaghav Thirumaligai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/glass.css" />
+</head>
+
+<body>
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob a"></div>
+    <div class="blob b"></div>
+    <div class="blob c"></div>
+  </div>
+
+  <div class="shell">
+    <aside class="nav glass">
+      <img src="images/pfp.webp" alt="Raaghav Thirumaligai" class="avatar" />
+      <div class="name">Raaghav Thirumaligai</div>
+      <div class="muted">Mechanical Engineer</div>
+      <div class="muted">Control Theory + Automation</div>
+      <a href="index.html">Home</a>
+      <a href="cv_RaaghavThirumaligai.pdf" target="_blank" rel="noopener">View CV</a>
+      <a href="projects.html" class="active">Projects (wip)</a>
+      <a href="research.html">Research (wip)</a>
+      <a href="mailto:rthirumaligai@gmail.com">Email</a>
+    </aside>
+
+    <main class="content glass">
+      <section class="hero glass">
+        <h1>King + Rook vs King Endgame Solver</h1>
+        <p>Final project for ECE 270 (Game Theory) taught by Joao P. Hespanha, following the modeling style from his textbook <em>Noncooperative Game Theory: An Introduction for Engineers and Computer Scientists</em>. The KRK endgame is treated as a finite, sequential, zero-sum game with adversarial best response at every move.</p>
+      </section>
+
+      <section class="grid">
+        <article class="card glass span-4">
+          <a class="preview-link" href="assets/images/projects/krk/gifs/real1_test.gif" target="_blank" rel="noopener">
+            <h3>Dodge Stalemate</h3>
+            <img src="assets/images/projects/krk/gifs/real1_test.gif" alt="KRK rollout example real 1" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; border:1px solid rgba(255,255,255,0.65);" />
+            <p>Click to open GIF</p>
+          </a>
+        </article>
+
+        <article class="card glass span-4">
+          <a class="preview-link" href="assets/images/projects/krk/gifs/real5_test.gif" target="_blank" rel="noopener">
+            <h3>Patient Rook</h3>
+            <img src="assets/images/projects/krk/gifs/real5_test.gif" alt="KRK rollout example real 5" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; border:1px solid rgba(255,255,255,0.65);" />
+            <p>Click to open GIF</p>
+          </a>
+        </article>
+
+        <article class="card glass span-4">
+          <a class="preview-link" href="assets/images/projects/krk/gifs/real7_test.gif" target="_blank" rel="noopener">
+            <h3>Middle-File Mate</h3>
+            <img src="assets/images/projects/krk/gifs/real7_test.gif" alt="KRK rollout example real 7" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; border:1px solid rgba(255,255,255,0.65);" />
+            <p>Click to open GIF</p>
+          </a>
+        </article>
+
+        <article class="card glass span-7">
+          <h2>Game-Theoretic Framing</h2>
+          <div class="filler">
+            The endgame is formulated as a sequential zero-sum game:
+            <ul class="clean">
+              <li><strong>White (minimizer):</strong> force checkmate while avoiding stalemate.</li>
+              <li><strong>Black (maximizer):</strong> avoid mate, delay loss, or capture the rook.</li>
+            </ul>
+          </div>
+          <div class="filler">
+            Decision-making follows the same principle emphasized in class: assume the opponent plays a best response to your policy at every stage.
+          </div>
+          <div class="filler">
+            State is encoded as a 65-element vector: 64 board entries + 1 move counter (even/odd parity for side-to-move), enabling explicit dynamic-state recursion.
+          </div>
+        </article>
+
+        <article class="card glass span-5">
+          <h2>Legal-Move Constraints</h2>
+          <img src="assets/images/projects/krk/kingTouch.png" alt="Illegal king-touching move example" style="width:100%; border-radius:16px; border:1px solid rgba(255,255,255,0.65); margin-bottom:10px;" />
+          <img src="assets/images/projects/krk/rookHop.png" alt="Illegal rook-hop move example" style="width:100%; border-radius:16px; border:1px solid rgba(255,255,255,0.65); margin-bottom:10px;" />
+          <img src="assets/images/projects/krk/protectedRook.png" alt="Illegal capture of protected rook example" style="width:100%; border-radius:16px; border:1px solid rgba(255,255,255,0.65);" />
+        </article>
+
+        <article class="card glass span-12">
+          <h2>From Game Theory Principles to Code</h2>
+          <div class="split">
+            <div class="span-6">
+              <div class="filler" style="min-height:0;">
+                <strong>Core strategy computation</strong>
+                <ul class="clean">
+                  <li>depth-limited minimax</li>
+                  <li>alpha-beta pruning</li>
+                  <li>best-response assumption at each ply</li>
+                </ul>
+              </div>
+            </div>
+            <div class="span-6">
+              <div class="filler" style="min-height:0;">
+                <strong>Dynamic-programming flavor</strong>
+                <ul class="clean">
+                  <li>memoized recursive evaluation</li>
+                  <li>persistent transposition-style cache reuse</li>
+                  <li>terminal-state early exits</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card glass span-12">
+          <h2>Payoff / Cost Design</h2>
+          <div class="filler" style="margin-bottom:12px;">
+            The payoff design follows course principles by combining terminal rewards/penalties with positional shaping terms.
+            <ul class="clean">
+              <li>strong terminal preference for checkmate</li>
+              <li>strong penalties for stalemate and rook loss</li>
+              <li>positional shaping using black-king mobility ("oxygen") and king geometry</li>
+            </ul>
+          </div>
+          <img src="assets/images/projects/krk/stayInCheck.png" alt="Illegal move where black remains in check" style="width:100%; border-radius:16px; border:1px solid rgba(255,255,255,0.65);" />
+        </article>
+
+        <article class="card glass span-12">
+          <h2>Project Assets</h2>
+          <a class="preview-link" href="assets/docs/projects/krk/FinalPres.pdf" target="_blank" rel="noopener">
+            <h3>Final Presentation (PDF)</h3>
+            <p>Slides from the final class presentation: formulation, legality model, minimax/alpha-beta/memoization design, and rollout examples.</p>
+          </a>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/glass.js"></script>
+</body>
+
+</html>

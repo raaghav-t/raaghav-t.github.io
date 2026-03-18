@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Satellite Rendezvous MPC Project | Raaghav Thirumaligai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/glass.css" />
+</head>
+
+<body>
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob a"></div>
+    <div class="blob b"></div>
+    <div class="blob c"></div>
+  </div>
+
+  <div class="shell">
+    <aside class="nav glass">
+      <img src="images/pfp.webp" alt="Raaghav Thirumaligai" class="avatar" />
+      <div class="name">Raaghav Thirumaligai</div>
+      <div class="muted">Mechanical Engineer</div>
+      <div class="muted">Control Theory + Automation</div>
+      <a href="index.html">Home</a>
+      <a href="cv_RaaghavThirumaligai.pdf" target="_blank" rel="noopener">View CV</a>
+      <a href="projects.html" class="active">Projects (wip)</a>
+      <a href="research.html">Research (wip)</a>
+      <a href="mailto:rthirumaligai@gmail.com">Email</a>
+    </aside>
+
+    <main class="content glass">
+      <section class="hero glass">
+        <h1>Constrained Satellite Rendezvous With MPC</h1>
+        <p>Final project exploring Hill-Clohessy-Wiltshire (HCW) relative satellite dynamics with zero-order-hold discretization, constrained control, and controller tradeoffs between convergence speed and fuel usage.</p>
+      </section>
+
+      <section class="grid">
+        <article class="card glass span-7">
+          <h2>Problem + Model</h2>
+          <div class="filler">
+            Chaser-target relative motion is modeled in the Hill frame using the linear HCW equations, then discretized with a zero-order hold map for controller synthesis and simulation.
+          </div>
+          <div class="filler">
+            Controller constraints include bounded acceleration magnitude per axis and terminal-state targeting. The acceleration limit used is
+            <strong>&plusmn;0.5 mm/s<sup>2</sup></strong>, motivated by recent constant-thrust rendezvous literature.
+          </div>
+          <div class="filler">
+            The project compares three controllers on a common model and random initial-condition sweeps:
+            <ul class="clean">
+              <li><strong>Saturated LQR</strong> baseline</li>
+              <li><strong>MPCv2</strong>: state-focused constrained MPC</li>
+              <li><strong>MPCv1</strong>: economic MPC with fuel-prioritized cost</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card glass span-5">
+          <h2>HCW Geometry</h2>
+          <img src="assets/images/projects/satellite-rendezvous/HCW_graphic.png" alt="HCW relative satellite geometry" style="width:100%; border-radius:16px; border:1px solid rgba(255,255,255,0.65);" />
+          <p class="muted" style="margin-top:10px;">Relative-motion frame setup for rendezvous and tracking.</p>
+          <img src="assets/images/projects/satellite-rendezvous/HCW_eqn.png" alt="HCW relative satellite geometry" style="width:100%; border-radius:1px; border:1px solid rgba(255,255,255,0.65);" />
+          <img src="assets/images/projects/satellite-rendezvous/HCW_eqn_def.png" alt="HCW relative satellite geometry" style="width:27%; border-radius:1px; border:1px solid rgba(255,255,255,0.65);" />
+        </article>
+
+        <article class="card glass span-12">
+          <h2>Controller Comparisons</h2>
+          <div class="split">
+            <div class="span-6">
+              <img src="assets/images/projects/satellite-rendezvous/comparison_light.png" alt="Trajectory comparison across controllers" style="width:100%; border-radius:16px; border:1px solid rgba(255,255,255,0.65);" />
+            </div>
+            <div class="span-6">
+              <img src="assets/images/projects/satellite-rendezvous/fuelComp_light.png" alt="Fuel proxy histogram comparison" style="width:100%; border-radius:16px; border:1px solid rgba(255,255,255,0.65);" />
+            </div>
+          </div>
+          <div class="filler" style="margin-top:12px; min-height: 0;">
+            <strong>Key result:</strong> constrained MPC improved practical convergence behavior over saturated LQR under input limits, while economic MPC reduced fuel proxy relative to state-focused MPC with slower convergence.
+          </div>
+        </article>
+        <article class="card glass span-12">
+          <h2>Project Assets</h2>
+          <a class="preview-link" href="assets/docs/projects/satellite-rendezvous/mpcFinalPres_v3.pdf" target="_blank" rel="noopener">
+            <h3>Final Presentation (PDF)</h3>
+            <p>Main final deck with model, formulation, and controller comparison.</p>
+          </a>
+          <a class="preview-link" href="assets/docs/projects/satellite-rendezvous/mpcFinalReport.pdf" target="_blank" rel="noopener">
+            <h3>5 Page Report (PDF)</h3>
+            <p>Main final report covering same content, in 5 short pages.</p>
+          </a>
+        </article>
+        <article class="card glass span-12">
+          <h2>LQR Example</h2>
+          <img src="assets/images/projects/satellite-rendezvous/LQR_light.png" alt="Saturated LQR response" style="width:100%; border-radius:16px; border:1px solid rgba(255,255,255,0.65);" />
+        </article>
+
+        <article class="card glass span-12">
+          <h2>State MPC Example</h2>
+          <img src="assets/images/projects/satellite-rendezvous/MPCV2_light.png" alt="State-focused MPC response" style="width:100%; border-radius:16px; border:1px solid rgba(255,255,255,0.65);" />
+        </article>
+
+        <article class="card glass span-12">
+          <h2>Economic MPC Example</h2>
+          <img src="assets/images/projects/satellite-rendezvous/MPCV1_light.png" alt="Economic MPC response" style="width:100%; border-radius:16px; border:1px solid rgba(255,255,255,0.65);" />
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/glass.js"></script>
+</body>
+
+</html>
