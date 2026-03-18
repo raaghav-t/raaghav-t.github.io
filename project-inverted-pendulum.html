@@ -34,74 +34,107 @@
     <main class="content glass">
       <section class="hero glass">
         <h1>Inverted Pendulum on Cart</h1>
-        <p>ME155C final project focused on full-state behavior control: swing-up from the hanging equilibrium, robust balancing around upright, and controlled catching back to downward equilibrium using a state-machine architecture.</p>
+        <p>ME155C final project implementing a hybrid controller for swing-up, balancing, and catching on hardware. The final system combined model identification, LQR/LQG regulation, and logic-based mode switching in Simulink/QUARC.</p>
       </section>
 
       <section class="grid">
-        <article class="card glass span-7">
-          <h2>System + Objectives</h2>
-          <div class="filler">
-            Hardware setup: cart-actuated pendulum with encoder feedback for both pendulum angle and cart position. A single motor drives the cart, and the rod is pinned to the cart with asymmetric mass distribution.
+
+       <article class="card glass span-12">
+          <h2>Hardware Demo</h2>
+          <div style="position:relative; width:100%; padding-top:56.25%; border-radius:25px; overflow:hidden; border:1px solid rgba(255,255,255,0.65);">
+            <iframe
+              src="https://www.youtube.com/embed/cFawTXDfmD8"
+              title="Inverted Pendulum Swing-up Balance Catch Demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              style="position:absolute; inset:0; width:100%; height:100%; border:0;">
+            </iframe>
           </div>
-          <div class="filler">
-            Primary control objectives:
-            <ul class="clean">
-              <li>Stabilize the downward equilibrium for repeatable catch/reset behavior.</li>
-              <li>Stabilize the upward (inverted) equilibrium for balancing.</li>
-              <li>Switch reliably between these equilibria through a state machine.</li>
-            </ul>
-          </div>
-          <div class="filler">
-            Identification workflow:
-            <ul class="clean">
-              <li>Logarithmic sine sweep excitation in approximately 0.3 to 3 Hz range.</li>
-              <li>`tfest` run across 30 experiments to estimate linear models.</li>
-              <li>Cart modeled with an assumed integrator + voltage-to-velocity fit.</li>
-              <li>Model structures used: cart (2 poles, 1 zero), pendulum (3 poles, 2 zeros).</li>
-            </ul>
-          </div>
+          <p class="muted" style="margin-top:10px;">Direct link: <a class="inline" href="https://www.youtube.com/watch?v=cFawTXDfmD8" target="_blank" rel="noopener">watch on YouTube</a></p>
         </article>
 
-        <article class="card glass span-5">
+
+        <article class="card glass span-7">
           <h2>Controller Architecture</h2>
           <div class="filler">
-            <strong>Initialization:</strong> uses gravity-aligned calibration for accurate angle reference, especially near the inverted target state.
+            The pendulum controller is structured as a state machine with three modes:
+            <ul class="clean">
+              <li><strong>Swing-up:</strong> energy injection near zero-crossings to raise the pendulum with controlled velocity.</li>
+              <li><strong>Balance:</strong> LQR/LQG around the unstable upright equilibrium.</li>
+              <li><strong>Catch:</strong> LQR/LQG around the stable downward equilibrium to reset for the next swing-up.</li>
+            </ul>
           </div>
           <div class="filler">
-            <strong>Swing-Up:</strong> energy injection around zero crossings by moving cart opposite angular velocity direction, with proportional position regulation and activation near ±30 degrees.
+            Project objectives:
+            <ul class="clean">
+              <li>Reliable transitions between downward and upward equilibria.</li>
+              <li>Robust balancing near upright with disturbance recovery.</li>
+              <li>Repeatable catch/reset cycles without large cart drift.</li>
+            </ul>
           </div>
           <div class="filler">
-            <strong>Balancing:</strong> enters near upright (about ±23 degrees) using LQR/LQG around the unstable equilibrium to regulate angle and cart position.
-          </div>
-          <div class="filler">
-            <strong>Catching:</strong> engages as pendulum falls (about ±90 degrees window) using LQR/LQG about the stable downward equilibrium to reset into a predictable next swing-up cycle.
-          </div>
-        </article>
-
-        <article class="card glass span-7">
-          <h2>Performance + Lessons</h2>
-          <div class="filler">
-            The state-machine design produced consistent behavior across swing-up, balance, and catch phases while reducing chaotic resets. Tuning focused on robust transitions and preserving controllability near region boundaries.
-          </div>
-          <div class="filler">
-            Key practical insight: transition logic was as important as controller gains. Good region definitions and fail-safe transitions significantly improved repeatability.
+            Key balancing-state penalty weights used in the final design:
+            <ul class="clean">
+              <li>Balance LQR: <code>diag([2000, 20, 10, 0.01])</code></li>
+              <li>Catch LQR: <code>diag([8000, 10, 100, 0.01])</code></li>
+              <li>State order: angle, angular velocity, cart position, cart velocity.</li>
+            </ul>
           </div>
         </article>
 
         <article class="card glass span-5">
-          <h2>Project Assets</h2>
-          <div class="img-slot">Add setup photo, block diagram, or response plots here</div>
-          <div class="preview-link" href="assets/docs/projects/inverted-pendulum/ME155C_Final_Project_Presentation_2.pdf" >
-            <a> Open Final Presentation (PDF)</a>
+          <h2>System ID Pipeline</h2>
+          <div class="filler">
+            Experimental data was collected with a logarithmic sine sweep in approximately <strong>0.3 to 3 Hz</strong> (MATLAB <code>logspace</code>-based sweep).
           </div>
           <div class="filler">
-            Future work listed in the presentation:
-            <ul class="clean">
-              <li>Add correction term for steady-state error.</li>
-              <li>Improve failure detection and robust fallback logic.</li>
-            </ul>
+            Parametric models were estimated with <code>tfest</code> over multiple trials (30 experiment trajectories in the report workflow).
+          </div>
+          <div class="filler">
+            Identified structure used a dominant integrator in cart dynamics plus a 3-pole/2-zero pendulum model, then reflected unstable dynamics for the upright operating point.
+          </div>
+          <div class="filler">
+            Kalman filtering in Simulink provided full-state estimates for the LQG loops used in balancing and catching.
           </div>
         </article>
+
+        <article class="card glass span-12">
+          <h2>State Machine Logic</h2>
+          <img src="assets/images/projects/inverted-pendulum/stateMachine.png" alt="Inverted pendulum controller state machine diagram" style="width:100%; border-radius:16px; border:1px solid rgba(255,255,255,0.65);" />
+          <p class="muted" style="margin-top:10px;">Initialization routes into swing-up, balancing, or catching based on current configuration.</p>
+        </article>
+
+        <article class="card glass span-12">
+          <h2>Controller Activation Regions</h2>
+          <img src="assets/images/projects/inverted-pendulum/systemControllers.png" alt="State-space style controller activation map for inverted pendulum" style="width:100%; border-radius:16px; border:1px solid rgba(255,255,255,0.65);" />
+          <p class="muted" style="margin-top:10px;">Visual diagram of where each controller is active in state space.</p>
+        </article>
+
+        <article class="card glass span-12">
+          <h2>Project Assets</h2>
+          <a class="preview-link" href="assets/docs/projects/inverted-pendulum/invPendReport.pdf" target="_blank" rel="noopener">
+            <h3>Final Report (PDF)</h3>
+            <p>Complete writeup covering identification, controller design, state machine implementation, and closed-loop performance.</p>
+          </a>
+          <a class="preview-link" href="assets/docs/projects/inverted-pendulum/invPendFinalPres.pdf" target="_blank" rel="noopener">
+            <h3>Final Presentation (PDF)</h3>
+            <p>Slides with architecture, transition logic, and experimental demo results.</p>
+          </a>
+        </article>
+
+                <article class="card glass span-12">
+          <h2>Closed-Loop Behavior</h2>
+          <div class="filler">
+            The final implementation consistently executed mode transitions and could recover from many failed balancing attempts by re-entering catch then swing-up.
+          </div>
+          <div class="filler">
+            Observed failure modes were tied mostly to extreme momentum events (cart rail impacts, fast swings) and encoder issues across full rotations, which could produce slow drift.
+          </div>
+          <div class="filler">
+            Planned improvements: stronger failure guards in the state machine and a small integral correction to reduce steady-state drift.
+          </div>
+        </article>
+
       </section>
     </main>
   </div>
