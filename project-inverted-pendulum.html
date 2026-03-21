@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="assets/css/glass.css" />
 </head>
 
-<body>
+<body data-nav="projects">
   <div class="bg-blobs" aria-hidden="true">
     <div class="blob a"></div>
     <div class="blob b"></div>
@@ -19,17 +19,7 @@
   </div>
 
   <div class="shell">
-    <aside class="nav glass">
-      <img src="images/pfp.webp" alt="Raaghav Thirumaligai" class="avatar" />
-      <div class="name">Raaghav Thirumaligai</div>
-      <div class="muted">Mechanical Engineer</div>
-      <div class="muted">Control Theory + Automation</div>
-      <a href="index.html">Home</a>
-      <a href="cv_RaaghavThirumaligai.pdf" target="_blank" rel="noopener">View CV</a>
-      <a href="projects.html" class="active">Projects (wip)</a>
-      <a href="research.html">Research (wip)</a>
-      <a href="mailto:rthirumaligai@gmail.com">Email</a>
-    </aside>
+    <div data-include="nav"></div>
 
     <main class="content glass">
       <section class="hero glass">
@@ -139,6 +129,7 @@
     </main>
   </div>
 
+  <script src="assets/js/include-nav.js"></script>
   <script src="assets/js/glass.js"></script>
 </body>
 
