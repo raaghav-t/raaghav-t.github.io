@@ -54,7 +54,8 @@ body.portfolio-page {
 }
 
 .portfolio-content {
-  padding: clamp(18px, 3vw, 42px);
+  --portfolio-content-pad: clamp(18px, 3vw, 42px);
+  padding: var(--portfolio-content-pad);
   border-radius: 42px;
   background: rgba(255, 255, 255, 0.58);
   border-color: rgba(255, 255, 255, 0.75);
@@ -150,12 +151,45 @@ body.portfolio-page {
   margin-top: 38px;
 }
 
-.scale-strip div {
+.scale-strip a {
+  position: relative;
+  display: block;
   min-height: 116px;
-  padding: 16px;
+  padding: 16px 48px 16px 16px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.48);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.scale-strip a::after {
+  content: "↓";
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(185, 19, 114, 0.1);
+  color: var(--portfolio-pink);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.scale-strip a:hover,
+.scale-strip a:focus-visible {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 14px 28px rgba(40, 46, 59, 0.12);
+  outline: none;
+}
+
+.scale-strip a:focus-visible {
+  box-shadow: 0 0 0 3px rgba(185, 19, 114, 0.22), 0 14px 28px rgba(40, 46, 59, 0.12);
 }
 
 .scale-strip strong,
@@ -202,7 +236,8 @@ body.portfolio-page {
 }
 
 .manifesto {
-  margin: 0 calc(clamp(18px, 3vw, 42px) * -1);
+  margin-right: calc(0px - var(--portfolio-content-pad));
+  margin-left: calc(0px - var(--portfolio-content-pad));
   padding: clamp(42px, 7vw, 90px) clamp(26px, 6vw, 90px);
   background: var(--portfolio-ink);
   color: white;
@@ -598,7 +633,8 @@ body.portfolio-page {
   }
 
   .portfolio-content {
-    padding: 16px;
+    --portfolio-content-pad: 16px;
+    padding: var(--portfolio-content-pad);
     border-radius: 28px;
   }
 
@@ -612,7 +648,7 @@ body.portfolio-page {
     grid-template-columns: 1fr;
   }
 
-  .scale-strip div {
+  .scale-strip a {
     min-height: 0;
   }
 
