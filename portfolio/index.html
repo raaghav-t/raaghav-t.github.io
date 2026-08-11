@@ -73,7 +73,9 @@
 
         <div class="disc-layout">
           <figure class="image-panel wide-sketch">
-            <img src="./assets/disc-sketch.webp" alt="Hand-drawn Disc concept exploring placement, controls, timers, music, Siri, and calendar interactions" />
+            <button class="sketch-lightbox-trigger" type="button" data-full="./assets/disc-sketch-full.png" data-alt="Hand-drawn Disc concept exploring placement, controls, timers, music, Siri, and calendar interactions" aria-label="Open the Disc sketch full screen" aria-haspopup="dialog" aria-controls="sketch-dialog">
+              <img src="./assets/disc-sketch.webp" alt="Hand-drawn Disc concept exploring placement, controls, timers, music, Siri, and calendar interactions" />
+            </button>
             <figcaption>The first sketch treated Keynote as a visual notebook: placement, behavior, and use cases on one canvas.</figcaption>
           </figure>
 
@@ -116,7 +118,9 @@
         <div class="concept-grid">
           <article class="concept-card">
             <figure>
-              <img src="./assets/orb-sketch.webp" alt="Hand-drawn Orb concept using translucent color, touch, rotation, and motion for ambient notifications" />
+              <button class="sketch-lightbox-trigger" type="button" data-full="./assets/orb-sketch-full.png" data-alt="Hand-drawn Orb concept using translucent color, touch, rotation, and motion for ambient notifications" aria-label="Open the Orb sketch full screen" aria-haspopup="dialog" aria-controls="sketch-dialog">
+                <img src="./assets/orb-sketch.webp" alt="Hand-drawn Orb concept using translucent color, touch, rotation, and motion for ambient notifications" />
+              </button>
             </figure>
             <div class="concept-copy">
               <p class="eyebrow">Orb · Ambient information</p>
@@ -128,7 +132,9 @@
 
           <article class="concept-card">
             <figure>
-              <img src="./assets/hover-touch-sketch.webp" alt="Hover Touch sketch using a front camera and projected shadow to estimate a gloved fingertip above a phone" />
+              <button class="sketch-lightbox-trigger" type="button" data-full="./assets/hover-touch-sketch-full.png" data-alt="Hover Touch sketch using a front camera and projected shadow to estimate a gloved fingertip above a phone" aria-label="Open the Hover Touch sketch full screen" aria-haspopup="dialog" aria-controls="sketch-dialog">
+                <img src="./assets/hover-touch-sketch.webp" alt="Hover Touch sketch using a front camera and projected shadow to estimate a gloved fingertip above a phone" />
+              </button>
             </figure>
             <div class="concept-copy">
               <p class="eyebrow">Hover Touch · Robust input</p>
@@ -252,7 +258,16 @@
     </main>
   </div>
 
+  <dialog class="sketch-dialog" id="sketch-dialog" aria-label="Full-screen concept sketch">
+    <div class="sketch-dialog-inner">
+      <button class="sketch-dialog-close" type="button" aria-label="Close full-screen sketch">Close <span aria-hidden="true">×</span></button>
+      <img id="sketch-dialog-image" alt="" />
+      <p>Click outside the sketch or press Esc to close.</p>
+    </div>
+  </dialog>
+
   <script src="../assets/js/include-nav.js"></script>
+  <script src="./portfolio.js"></script>
 </body>
 
 </html>
