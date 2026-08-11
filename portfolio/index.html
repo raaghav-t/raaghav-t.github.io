@@ -10,11 +10,11 @@
   <meta property="og:title" content="Interaction Prototyping | Raaghav Thirumaligai" />
   <meta property="og:description" content="Physical mockups, visual stories, autonomous systems, and native software." />
   <meta property="og:url" content="https://raaghavt.com/portfolio/" />
-  <meta property="og:image" content="https://raaghavt.com/portfolio/assets/og.png" />
+  <meta property="og:image" content="https://raaghavt.com/portfolio/assets/og-v2.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Interaction Prototyping | Raaghav Thirumaligai" />
-  <meta name="twitter:description" content="Make it tangible. Then learn from it." />
-  <meta name="twitter:image" content="https://raaghavt.com/portfolio/assets/og.png" />
+  <meta name="twitter:description" content="Make it. Learn from it. Repeat." />
+  <meta name="twitter:image" content="https://raaghavt.com/portfolio/assets/og-v2.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet" />
@@ -33,7 +33,7 @@
       <section class="portfolio-hero" aria-labelledby="portfolio-title">
         <div class="hero-copy">
           <p class="eyebrow">Prototyping designer · Mechanical engineer · Controls researcher</p>
-          <h1 id="portfolio-title">Make it tangible.<br /><span>Then learn from it.</span></h1>
+          <h1 id="portfolio-title">Make it.<br /><span>Learn from it.<br />Repeat.</span></h1>
           <p class="hero-lede">
             I move between physical mockups, visual stories, sensing, and code to explore how people and devices respond to one another.
           </p>
@@ -73,9 +73,9 @@
 
         <div class="disc-layout">
           <figure class="image-panel wide-sketch">
-            <button class="sketch-lightbox-trigger" type="button" data-full="./assets/disc-sketch-full.png" data-alt="Hand-drawn Disc concept exploring placement, controls, timers, music, Siri, and calendar interactions" aria-label="Open the Disc sketch full screen" aria-haspopup="dialog" aria-controls="sketch-dialog">
+            <a class="sketch-lightbox-trigger" href="./assets/disc-sketch-full.png" target="_blank" rel="noopener" data-full="./assets/disc-sketch-full.png" data-alt="Hand-drawn Disc concept exploring placement, controls, timers, music, Siri, and calendar interactions" aria-label="Open the Disc sketch full screen" aria-haspopup="dialog" aria-controls="sketch-dialog">
               <img src="./assets/disc-sketch.webp" alt="Hand-drawn Disc concept exploring placement, controls, timers, music, Siri, and calendar interactions" />
-            </button>
+            </a>
             <figcaption>The first sketch treated Keynote as a visual notebook: placement, behavior, and use cases on one canvas.</figcaption>
           </figure>
 
@@ -118,9 +118,9 @@
         <div class="concept-grid">
           <article class="concept-card">
             <figure>
-              <button class="sketch-lightbox-trigger" type="button" data-full="./assets/orb-sketch-full.png" data-alt="Hand-drawn Orb concept using translucent color, touch, rotation, and motion for ambient notifications" aria-label="Open the Orb sketch full screen" aria-haspopup="dialog" aria-controls="sketch-dialog">
+              <a class="sketch-lightbox-trigger" href="./assets/orb-sketch-full.png" target="_blank" rel="noopener" data-full="./assets/orb-sketch-full.png" data-alt="Hand-drawn Orb concept using translucent color, touch, rotation, and motion for ambient notifications" aria-label="Open the Orb sketch full screen" aria-haspopup="dialog" aria-controls="sketch-dialog">
                 <img src="./assets/orb-sketch.webp" alt="Hand-drawn Orb concept using translucent color, touch, rotation, and motion for ambient notifications" />
-              </button>
+              </a>
             </figure>
             <div class="concept-copy">
               <p class="eyebrow">Orb · Ambient information</p>
@@ -132,9 +132,9 @@
 
           <article class="concept-card">
             <figure>
-              <button class="sketch-lightbox-trigger" type="button" data-full="./assets/hover-touch-sketch-full.png" data-alt="Hover Touch sketch using a front camera and projected shadow to estimate a gloved fingertip above a phone" aria-label="Open the Hover Touch sketch full screen" aria-haspopup="dialog" aria-controls="sketch-dialog">
+              <a class="sketch-lightbox-trigger" href="./assets/hover-touch-sketch-full.png" target="_blank" rel="noopener" data-full="./assets/hover-touch-sketch-full.png" data-alt="Hover Touch sketch using a front camera and projected shadow to estimate a gloved fingertip above a phone" aria-label="Open the Hover Touch sketch full screen" aria-haspopup="dialog" aria-controls="sketch-dialog">
                 <img src="./assets/hover-touch-sketch.webp" alt="Hover Touch sketch using a front camera and projected shadow to estimate a gloved fingertip above a phone" />
-              </button>
+              </a>
             </figure>
             <div class="concept-copy">
               <p class="eyebrow">Hover Touch · Robust input</p>
@@ -258,13 +258,13 @@
     </main>
   </div>
 
-  <dialog class="sketch-dialog" id="sketch-dialog" aria-label="Full-screen concept sketch">
+  <div class="sketch-dialog" id="sketch-dialog" role="dialog" aria-modal="true" aria-label="Full-screen concept sketch" hidden>
     <div class="sketch-dialog-inner">
       <button class="sketch-dialog-close" type="button" aria-label="Close full-screen sketch">Close <span aria-hidden="true">×</span></button>
       <img id="sketch-dialog-image" alt="" />
       <p>Click outside the sketch or press Esc to close.</p>
     </div>
-  </dialog>
+  </div>
 
   <script src="../assets/js/include-nav.js"></script>
   <script src="./portfolio.js"></script>
