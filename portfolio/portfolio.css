@@ -353,12 +353,33 @@ body.portfolio-page {
   color: #a52a16;
 }
 
-.text-link {
-  display: inline-block;
-  margin-top: 16px;
-  color: var(--portfolio-blue);
-  font-weight: 700;
-  text-decoration: none;
+.study-downloads {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 20px;
+}
+
+.study-download {
+  min-width: 0;
+  min-height: 72px;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 13px 15px;
+  border-radius: 18px;
+  text-align: left;
+}
+
+.study-download span {
+  line-height: 1.2;
+}
+
+.study-download small {
+  margin-top: 5px;
+  color: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  opacity: 0.66;
 }
 
 .compact-intro h2 {
@@ -653,6 +674,10 @@ body.portfolio-page {
   }
 
   .system-card {
+    grid-template-columns: 1fr;
+  }
+
+  .study-downloads {
     grid-template-columns: 1fr;
   }
 
