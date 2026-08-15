@@ -268,15 +268,7 @@
 
   <script src="../assets/js/include-nav.js"></script>
   <script src="./portfolio.js"></script>
-  <script>
-    // Sends a privacy-preserving portfolio-open notification through Apps Script.
-    void fetch("https://script.google.com/macros/s/AKfycbwR4W3Jn33BQ2z9nvnP41L9fY5J6u2M3lRnEzFyrW1fMoXf0tGFjzWkzWX1TTkFh1BY/exec", {
-      method: "POST",
-      mode: "no-cors",
-      keepalive: true,
-      body: "portfolio-opened",
-    }).catch(() => {});
-  </script>
+  <script src="../assets/js/visit-notify.js"></script>
 </body>
 
 </html>
