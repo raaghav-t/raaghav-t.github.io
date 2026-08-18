@@ -19,6 +19,8 @@
   };
 
   const path = normalizePath(window.location.pathname);
+  // Link labels are intentionally expressed as bare query keys, such as ?acv.
+  const sourceTag = [...new URLSearchParams(window.location.search).keys()][0] || "";
   const userAgent = navigator.userAgent.toLowerCase();
   const visitType = /(bot|crawler|spider|headless|lighthouse|slurp|bingpreview)/.test(userAgent)
     ? "Likely automated"
@@ -27,6 +29,7 @@
   const payload = JSON.stringify({
     page: pageNames[path] || document.title || "Website",
     path,
+    sourceTag,
     visitType,
   });
 
