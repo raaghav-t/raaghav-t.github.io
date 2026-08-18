@@ -1,5 +1,5 @@
 (() => {
-  const endpoint = "https://script.google.com/macros/s/AKfycbwRpg-G0i-_cbHF2aUW_ryQE2iAGmQR3Ray-qL-5_4aCRyRKrH2ZnGt-VKS8y4BnxdL/exec";
+  const endpoint = "https://script.google.com/macros/s/AKfycbxT_U2Ng1TxHFcVNzh0MaHxfr1jwAkpaEnI1M4FZNMwwmAbQ-nSl-m1iwwVwS0ZQR0m/exec";
 
   const pageNames = {
     "/": "Homepage",
