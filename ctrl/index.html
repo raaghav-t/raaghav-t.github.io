@@ -31,1003 +31,1020 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <aside class="site-sidebar" aria-label="Controls portfolio navigation">
-      <a class="sidebar-profile" href="../index.html?gpt">
-        <img
-          class="sidebar-avatar"
-          src="../images/pfp.webp"
-          alt="Raaghav Thirumaligai"
-        />
-        <strong>Raaghav Thirumaligai</strong>
-        <span>Controls + Optimization</span>
-        <span>Physical Systems</span>
-      </a>
-      <p class="sidebar-kicker">Controls portfolio</p>
-      <nav aria-label="Controls portfolio">
-        <a href="#main"><span>00</span>Overview</a>
-        <a href="#featured"><span>01</span>Featured work</a>
-        <a href="#research"><span>02</span>Research</a>
-        <a href="#more"><span>03</span>More analyses</a>
-        <a href="#background"><span>04</span>Background</a>
-      </nav>
-      <div class="sidebar-actions">
-        <a
-          href="./assets/Raaghav_Thirumaligai_Controls_CV.pdf"
-          target="_blank"
-          rel="noopener"
-          >Controls CV ↗</a
-        >
-        <a class="nav-switch" href="../portfolio/?gpt"
-          >Prototyping portfolio ↗</a
-        >
-      </div>
-    </aside>
-
-    <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Raaghav Thirumaligai · Controls portfolio</p>
-          <h1 id="hero-title">
-            Control physical systems from
-            <span>models, data, and constraints.</span>
-          </h1>
-          <p class="hero-lede">
-            I model dynamics, identify what matters, and turn feedback laws into
-            behavior—from a 99-state distributed system to hardware that swings,
-            balances, detects, and acts.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#featured"
-              >Explore the core projects</a
-            >
-            <a
-              class="button button-ghost"
-              href="./assets/Raaghav_Thirumaligai_Controls_CV.pdf"
-              target="_blank"
-              rel="noopener"
-              >Controls CV</a
-            >
-          </div>
-          <dl class="hero-metrics">
-            <div>
-              <dt>99</dt>
-              <dd>state PDE model</dd>
-            </div>
-            <div>
-              <dt>Real time</dt>
-              <dd>QUARC hardware control</dd>
-            </div>
-            <div>
-              <dt>4</dt>
-              <dd>featured control + ML builds</dd>
-            </div>
-          </dl>
-        </div>
-
-        <aside class="hero-console" aria-label="Controls workflow">
-          <div class="console-head">
-            <span>CONTROL LOOP</span>
-            <span class="console-live">ACTIVE</span>
-          </div>
-          <ol>
-            <li>
-              <span>01</span>
-              <div>
-                <strong>Model</strong><small>physics + experiment logs</small>
-              </div>
-            </li>
-            <li>
-              <span>02</span>
-              <div>
-                <strong>Estimate</strong><small>state + uncertainty</small>
-              </div>
-            </li>
-            <li>
-              <span>03</span>
-              <div>
-                <strong>Optimize</strong><small>objectives + constraints</small>
-              </div>
-            </li>
-            <li>
-              <span>04</span>
-              <div>
-                <strong>Deploy</strong><small>software + hardware</small>
-              </div>
-            </li>
-          </ol>
-          <div class="console-trace" aria-hidden="true">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-          </div>
-        </aside>
-      </section>
-
-      <section
-        class="section-shell"
-        id="featured"
-        aria-labelledby="featured-title"
-      >
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Featured work · 01/04</p>
-            <h2 id="featured-title">The full loop, not just the controller.</h2>
-          </div>
-          <p>
-            Each project follows evidence from model construction through
-            closed-loop behavior, with the tradeoffs and limits left visible.
-          </p>
-        </div>
-
-        <article class="project project-pde">
-          <div class="project-copy">
-            <p class="project-index">
-              01 · Distributed-parameter systems · Apr–Jun 2026
-            </p>
-            <h3>Reduce the model.<br />Keep the behavior.</h3>
-            <p class="project-summary">
-              A boundary-actuated damped-wave PDE became a practical LQG study:
-              discretize the field, shape disturbances, design output feedback,
-              then ask how much controller order the full plant really needs.
-            </p>
-            <ul class="evidence-list">
-              <li>
-                Built a 99-state finite-difference plant with frequency-shaped
-                disturbances and measurement noise.
-              </li>
-              <li>
-                Designed LQR and Kalman-filter controllers for three disturbance
-                bandwidths.
-              </li>
-              <li>
-                Tested balanced-truncation orders 1–10 on the unreduced plant
-                across damping regimes.
-              </li>
-            </ul>
-            <p class="transfer-note">
-              <strong>Transferable method:</strong> distributed-field modeling,
-              reduction, disturbance estimation, and output feedback—the same
-              toolkit used when state is spread across a thermal or energy
-              system. This plant is simulated linear acoustics, not a thermal
-              experiment.
-            </p>
-            <div class="tag-row">
-              <span>LQG</span><span>Finite differences</span
-              ><span>Balanced truncation</span><span>MATLAB</span>
-            </div>
-            <a
-              class="text-link"
-              href="./assets/pde-lqg-report.pdf"
-              target="_blank"
-              rel="noopener"
-              >Read the technical report <span>↗</span></a
-            >
-          </div>
-
-          <div class="project-visual">
-            <figure>
-              <img
-                src="./assets/pde-frequency.webp"
-                alt="Closed-loop frequency responses for full-order and reduced-order LQG controllers"
-              />
-              <figcaption>
-                Full-order response and reduced-order controller sweep on the
-                same distributed plant.
-              </figcaption>
-            </figure>
-            <dl class="project-stats">
-              <div>
-                <dt>99</dt>
-                <dd>plant states</dd>
-              </div>
-              <div>
-                <dt>1–10</dt>
-                <dd>reduced orders</dd>
-              </div>
-              <div>
-                <dt>3</dt>
-                <dd>noise bandwidths</dd>
-              </div>
-            </dl>
-            <p class="project-result">
-              <strong>Reduction exposed a real boundary:</strong> 29/30 tested
-              controllers remained stable at β = 0.1, compared with 19/30 for
-              the lightly damped β = 0.001 plant.
-            </p>
-          </div>
-        </article>
-
-        <article class="project project-satellite project-reverse">
-          <div class="project-copy">
-            <p class="project-index">
-              02 · Constrained optimization · Jan–Mar 2026
-            </p>
-            <h3>Trade speed for effort—on purpose.</h3>
-            <p class="project-summary">
-              Three controllers, one six-state orbital model, and the same
-              randomized starts: a direct comparison of what changes when limits
-              and fuel priorities enter the objective.
-            </p>
-            <ul class="evidence-list">
-              <li>
-                Zero-order-hold discretized Hill–Clohessy–Wiltshire relative
-                dynamics at a 10-second sample time.
-              </li>
-              <li>
-                Implemented saturated LQR, state-focused constrained MPC, and
-                fuel-prioritized economic MPC.
-              </li>
-              <li>
-                Compared feasibility, convergence, time, and cumulative
-                <em>L</em><sub>1</sub> input effort across 50 matched cases.
-              </li>
-            </ul>
-            <div class="tag-row">
-              <span>MPC</span><span>Economic MPC</span><span>LQR</span
-              ><span>MPCTools</span><span>MATLAB</span>
-            </div>
-            <div class="project-links">
-              <a class="text-link" href="../project-satellite-MPC.html?gpt"
-                >Open the full project <span>→</span></a
-              >
-              <a
-                class="text-link"
-                href="../assets/docs/projects/satellite-rendezvous/mpcFinalReport.pdf"
-                target="_blank"
-                rel="noopener"
-                >Report <span>↗</span></a
-              >
-            </div>
-          </div>
-
-          <div class="project-visual visual-light">
-            <figure>
-              <img
-                src="../assets/images/projects/satellite-rendezvous/comparison_light.png"
-                alt="Aggregate convergence, fuel proxy, and convergence-speed comparison for LQR and two MPC controllers"
-              />
-              <figcaption>
-                Fifty randomized rendezvous cases. “Fuel” is cumulative input
-                effort, not propellant mass.
-              </figcaption>
-            </figure>
-            <dl class="project-stats">
-              <div>
-                <dt>±0.5</dt>
-                <dd>mm/s² per axis</dd>
-              </div>
-              <div>
-                <dt>50</dt>
-                <dd>matched cases</dd>
-              </div>
-              <div>
-                <dt>3</dt>
-                <dd>controller priorities</dd>
-              </div>
-            </dl>
-          </div>
-        </article>
-
-        <article class="project project-pendulum">
-          <div class="project-copy">
-            <p class="project-index">03 · Physical control · Apr–Jun 2025</p>
-            <h3>Identify it. Swing it. Catch it.</h3>
-            <p class="project-summary">
-              A physical cart-pendulum closed the gap between model
-              identification and real-time behavior through estimation, energy
-              shaping, local optimal control, and explicit mode transitions.
-            </p>
-            <ul class="evidence-list">
-              <li>
-                Collected logarithmic sine-sweep data and identified models
-                around stable and unstable equilibria.
-              </li>
-              <li>
-                Combined energy-based swing-up with Kalman estimation and
-                LQR/LQG balance and catch.
-              </li>
-              <li>
-                Ran the three-mode state machine on hardware through MATLAB,
-                Simulink, and QUARC.
-              </li>
-            </ul>
-            <div class="tag-row">
-              <span>System ID</span><span>LQR/LQG</span
-              ><span>Kalman filter</span><span>Hybrid control</span
-              ><span>QUARC</span>
-            </div>
-            <div class="project-links">
-              <a class="text-link" href="../project-inverted-pendulum.html?gpt"
-                >Open the full project <span>→</span></a
-              >
-              <a
-                class="text-link"
-                href="https://www.youtube.com/watch?v=cFawTXDfmD8"
-                target="_blank"
-                rel="noopener"
-                >Hardware demo <span>↗</span></a
-              >
-            </div>
-          </div>
-
-          <div class="project-visual visual-light">
-            <figure>
-              <img
-                src="../assets/images/projects/inverted-pendulum/systemControllers.png"
-                alt="Swing-up, balancing, and catching control regions for the inverted pendulum"
-              />
-              <figcaption>
-                Three controllers coordinated by state-dependent switching. Rail
-                impacts and encoder rollover remained explicit failure modes.
-              </figcaption>
-            </figure>
-            <dl class="project-stats">
-              <div>
-                <dt>0.3–3</dt>
-                <dd>Hz identification sweep</dd>
-              </div>
-              <div>
-                <dt>30</dt>
-                <dd>experiment trials</dd>
-              </div>
-              <div>
-                <dt>3</dt>
-                <dd>control modes</dd>
-              </div>
-            </dl>
-          </div>
-        </article>
-
-        <article class="project project-clean project-reverse">
-          <div class="project-copy">
-            <p class="project-index">
-              04 · ML + embedded autonomy · Apr–Jun 2024
-            </p>
-            <h3>Perception becomes motion.</h3>
-            <p class="project-summary">
-              C.L.E.A.N. brought classical machine learning into a physical
-              loop: detect a can, steer toward it, verify the material, and
-              coordinate a tracked base with a two-degree-of-freedom arm.
-            </p>
-            <ul class="evidence-list">
-              <li>
-                Led five people through weekly mechanical, electrical, and
-                software build–test cycles.
-              </li>
-              <li>
-                Trained and tuned a nine-stage OpenCV cascade on approximately
-                1,500 custom images.
-              </li>
-              <li>
-                Integrated Raspberry Pi steering, Arduino motor control,
-                ultrasonic and inductive sensing, and a worm-gear arm and claw.
-              </li>
-            </ul>
-            <div class="tag-row">
-              <span>OpenCV</span><span>Raspberry Pi</span><span>Arduino</span
-              ><span>State logic</span><span>Mechatronics</span>
-            </div>
-            <a class="text-link" href="../portfolio/?gpt#clean"
-              >See the integrated prototype story <span>→</span></a
-            >
-          </div>
-
-          <div class="project-visual visual-poster">
-            <figure>
-              <img
-                src="../portfolio/assets/clean-poster.webp"
-                alt="C.L.E.A.N. project poster showing the autonomous robot, computer vision, mechanical system, electronics, and results"
-              />
-              <figcaption>
-                A ten-week team prototype. The classifier is a classical OpenCV
-                cascade—not a neural network.
-              </figcaption>
-            </figure>
-            <dl class="project-stats">
-              <div>
-                <dt>5</dt>
-                <dd>person team</dd>
-              </div>
-              <div>
-                <dt>~1,500</dt>
-                <dd>custom images</dd>
-              </div>
-              <div>
-                <dt>10</dt>
-                <dd>build–test weeks</dd>
-              </div>
-            </dl>
-          </div>
-        </article>
-      </section>
-
-      <section class="matrix-section" aria-labelledby="matrix-title">
-        <div class="section-heading section-heading-light">
-          <div>
-            <p class="eyebrow">Technical map</p>
-            <h2 id="matrix-title">One practice, four kinds of evidence.</h2>
-          </div>
-          <p>
-            Move across the row to see where each project gets its model, how
-            state is inferred, what closes the loop, and where the result was
-            tested.
-          </p>
-        </div>
-
-        <table class="technical-matrix">
-          <caption>
-            Methods across the four featured projects
-          </caption>
-          <thead>
-            <tr class="matrix-row matrix-head">
-              <th scope="col">Project</th>
-              <th scope="col">Model</th>
-              <th scope="col">Estimate</th>
-              <th scope="col">Control / decision</th>
-              <th scope="col">Evidence</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="matrix-row">
-              <th scope="row">Distributed PDE</th>
-              <td>Finite-difference acoustic field</td>
-              <td>Kalman filter</td>
-              <td>LQG + model reduction</td>
-              <td>Full-plant simulation</td>
-            </tr>
-            <tr class="matrix-row">
-              <th scope="row">Satellite MPC</th>
-              <td>ZOH HCW dynamics</td>
-              <td>Full-state simulation</td>
-              <td>LQR + MPC + economic MPC</td>
-              <td>50 matched cases</td>
-            </tr>
-            <tr class="matrix-row">
-              <th scope="row">Cart-pendulum</th>
-              <td>Experimental system ID</td>
-              <td>Kalman filter</td>
-              <td>Energy + LQR/LQG + modes</td>
-              <td>Real-time hardware</td>
-            </tr>
-            <tr class="matrix-row">
-              <th scope="row">C.L.E.A.N.</th>
-              <td>Vision + sensor geometry</td>
-              <td>Cascade detector + sensors</td>
-              <td>Steering + state logic</td>
-              <td>Integrated robot</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section
-        class="research-section"
-        id="research"
-        aria-labelledby="research-title"
-      >
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Research + experimental systems</p>
-            <h2 id="research-title">
-              Feedback thinking across biology, fluids, and instruments.
-            </h2>
-          </div>
-          <p>
-            The common work is reconstructing dynamics from partial
-            measurements, then building the model, detector, or apparatus needed
-            to make the next decision trustworthy.
-          </p>
-        </div>
-
-        <div class="research-grid">
-          <article class="research-card">
-            <div class="research-meta">
-              <span>01</span><time>Jan 2025 – Jan 2026</time>
-            </div>
-            <p class="research-label">Biological Control Lab · Yeung UCSB</p>
-            <h3>
-              Transcription and DNA supercoiling as a coupled control system
-            </h3>
-            <p>
-              Co-developed a control-oriented model of genome-wide transcription
-              coupled to topoisomerase-regulated supercoiling. Used stability
-              and sensitivity analysis on stochastic and nonlinear population
-              models to identify parameters shaping transcription and growth.
-            </p>
-            <a
-              class="text-link"
-              href="https://www.biorxiv.org/content/10.1101/2025.05.26.655193"
-              target="_blank"
-              rel="noopener"
-              >Accepted manuscript · bioRxiv preprint <span>↗</span></a
-            >
-          </article>
-
-          <article class="research-card">
-            <div class="research-meta">
-              <span>02</span><time>Aug 2024 – Jun 2025</time>
-            </div>
-            <p class="research-label">M&amp;M Flow Lab · Master’s researcher</p>
-            <h3>Detecting stochastic clogging with limited visibility</h3>
-            <p>
-              Studied particle-laden suspension clogging under changing material
-              conditions. Prototyped a Python rolling-brightness and
-              windowed-visibility detector for event logging and post-analysis;
-              presented at APS DFD in November 2024.
-            </p>
-            <div class="tag-row">
-              <span>Python</span><span>Vision metric</span
-              ><span>Experiment logs</span><span>Thermofluids</span>
-            </div>
-          </article>
-
-          <article class="research-card">
-            <div class="research-meta">
-              <span>03</span><time>Jan 2023 – Aug 2024</time>
-            </div>
-            <p class="research-label">
-              M&amp;M Flow Lab · Undergraduate researcher
-            </p>
-            <h3>Instrumentation for repeatable granular-flow experiments</h3>
-            <p>
-              Designed and built an annular shear cell, then developed an
-              Arduino–MATLAB strain-gauge calibration, filtering, and DAQ
-              workflow. Presented the results at the Southern California Flow
-              Physics Symposium.
-            </p>
-            <div class="tag-row">
-              <span>Arduino</span><span>MATLAB</span><span>Strain gauges</span
-              ><span>Fabrication</span>
-            </div>
-          </article>
-
-          <article class="research-card">
-            <div class="research-meta">
-              <span>04</span><time>Jun 2023 – Oct 2023</time>
-            </div>
-            <p class="research-label">
-              Fluid Energy Science Lab · Undergraduate researcher
-            </p>
-            <h3>Wind-tunnel measurement from apparatus to dataset</h3>
-            <p>
-              Collected wake-model verification data, built an Arduino–MATLAB
-              DAQ system and app, and fabricated laser-cut and 3D-printed annuli
-              for repeatable wind-energy experiments.
-            </p>
-            <div class="tag-row">
-              <span>Wind tunnel</span><span>DAQ</span
-              ><span>Rapid fabrication</span><span>Model validation</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="bonus-section" id="more" aria-labelledby="more-title">
-        <div class="section-heading section-heading-dark">
-          <div>
-            <p class="eyebrow">More analyses · supplementary work</p>
-            <h2 id="more-title">Control ideas outside the core four.</h2>
-          </div>
-          <p>
-            Three compact studies extend the portfolio into hybrid biology,
-            biologically inspired computation, and robust loop-shaping. Select a
-            tab to open the evidence.
-          </p>
-        </div>
-
-        <div
-          class="analysis-tabs"
-          role="tablist"
-          aria-label="Supplementary controls analyses"
-        >
-          <button
-            type="button"
-            role="tab"
-            id="tab-dna"
-            aria-controls="panel-dna"
-            aria-selected="true"
-            data-tab="dna"
-          >
-            <span>01</span>Hybrid DNA dynamics
-          </button>
-          <button
-            type="button"
-            role="tab"
-            id="tab-astro"
-            aria-controls="panel-astro"
-            aria-selected="false"
-            data-tab="astro"
-            tabindex="-1"
-          >
-            <span>02</span>Biological self-attention
-          </button>
-          <button
-            type="button"
-            role="tab"
-            id="tab-robust"
-            aria-controls="panel-robust"
-            aria-selected="false"
-            data-tab="robust"
-            tabindex="-1"
-          >
-            <span>03</span>Robust loop-shaping
-          </button>
-        </div>
-
-        <div
-          class="analysis-panel is-active"
-          id="panel-dna"
-          role="tabpanel"
-          aria-labelledby="tab-dna"
-          data-tab-panel="dna"
-        >
-          <div class="analysis-copy">
-            <p class="analysis-status">Modeled + simulated course research</p>
-            <h3>Hybrid Dynamics of DNA Supercoiling Regulation</h3>
-            <p>
-              Modeled continuous mechanical relaxation interrupted by threshold-
-              and dwell-time-triggered enzyme jumps, making a biological
-              homeostasis question explicit as a hybrid automaton.
-            </p>
-            <ul class="evidence-list evidence-on-dark">
-              <li>
-                Defined flow and jump maps, enzyme-reset timing, and a
-                homeostatic target band.
-              </li>
-              <li>
-                Derived a candidate dwell-time bound and explored weak forward
-                invariance.
-              </li>
-              <li>
-                Ran MATLAB Hybrid Systems Toolbox ensembles and enzyme-action
-                ablations.
-              </li>
-            </ul>
-            <p class="scope-note">
-              <strong>Scope:</strong> derived and numerically explored; this
-              version does not claim global asymptotic stability or strong
-              forward invariance.
-            </p>
-            <a
-              class="text-link"
-              href="./assets/dna-hybrid-report.pdf"
-              target="_blank"
-              rel="noopener"
-              >Open the report <span>↗</span></a
-            >
-          </div>
-          <div class="analysis-media analysis-media-pair">
-            <figure>
-              <img
-                src="./assets/dna-hybrid-automaton.webp"
-                alt="Hybrid automaton with DNA-supercoiling flow, topoisomerase jump, and gyrase jump modes"
-              />
-              <figcaption>Flow and enzyme-triggered jump structure.</figcaption>
-            </figure>
-            <figure>
-              <img
-                src="./assets/dna-hybrid-trajectory.webp"
-                alt="Simulated DNA supercoiling trajectory with continuous arcs, discrete jumps, and target band"
-              />
-              <figcaption>
-                One trajectory exposes continuous arcs, jumps, and the target
-                band.
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-
-        <div
-          class="analysis-panel"
-          id="panel-astro"
-          role="tabpanel"
-          aria-labelledby="tab-astro"
-          data-tab-panel="astro"
-          hidden
-        >
-          <div class="analysis-copy">
-            <p class="analysis-status">
-              Literature synthesis + reproduction / extension
-            </p>
-            <h3>Biological Self-Attention: Neuron–Astrocyte Networks</h3>
-            <p>
-              Mapped a published neuron–astrocyte circuit onto query, key,
-              value, read/write, and normalization operations, then extended its
-              ALBERT normalization comparison to biologically motivated widths.
-            </p>
-            <ul class="evidence-list evidence-on-dark">
-              <li>
-                Explained how alternating neural and astrocyte dynamics can
-                approximate attention normalization.
-              </li>
-              <li>
-                Compared rodent- and human-scale influence widths with an ALBERT
-                softmax trace over roughly 200 tokens.
-              </li>
-              <li>
-                Observed a qualitative trend toward closer tracking at the
-                larger width.
-              </li>
-            </ul>
-            <p class="scope-note">
-              <strong>Scope:</strong> exploratory reproduction of published
-              Kozachkov et al. work—not a newly invented or trained transformer
-              and not biological validation.
-            </p>
-            <a
-              class="text-link"
-              href="./assets/astrocyte-attention-report.pdf"
-              target="_blank"
-              rel="noopener"
-              >Open the report <span>↗</span></a
-            >
-          </div>
-          <div class="analysis-media analysis-media-pair">
-            <figure>
-              <img
-                src="./assets/astrocyte-attention.webp"
-                alt="Comparison between rodent-scale and human-scale astrocyte normalization traces and ALBERT softmax"
-              />
-              <figcaption>
-                Qualitative normalization comparison at two biologically
-                motivated widths.
-              </figcaption>
-            </figure>
-            <figure>
-              <img
-                src="./assets/astrocyte-circuit.webp"
-                alt="Neuron and astrocyte circuit diagram used to explain biological self-attention"
-              />
-              <figcaption>
-                Published circuit interpreted through an attention lens.
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-
-        <div
-          class="analysis-panel"
-          id="panel-robust"
-          role="tabpanel"
-          aria-labelledby="tab-robust"
-          data-tab-panel="robust"
-          hidden
-        >
-          <div class="analysis-copy">
-            <p class="analysis-status">Modeled + simulated course analysis</p>
-            <h3>Robust Loop-Shaping for a Flexible Multimode Plant</h3>
-            <p>
-              Used zero-, one-, and ten-mode models to expose the cost of
-              neglected resonances, then shaped complementary sensitivity
-              against a multiplicative-uncertainty bound.
-            </p>
-            <ul class="evidence-list evidence-on-dark">
-              <li>
-                Built a 22nd-order “true” flexible plant from ten quadratic
-                modal factors.
-              </li>
-              <li>
-                Showed an aggressive nominal controller destabilizing the
-                ten-mode system.
-              </li>
-              <li>
-                Tuned a lower-gain design that remained bounded with closely
-                matched one- and ten-mode step responses.
-              </li>
-            </ul>
-            <p class="scope-note">
-              <strong>Scope:</strong> MATLAB simulation and loop-shaping—not
-              implemented <em>H</em><sub>∞</sub> synthesis, certified robust
-              performance, or hardware control.
-            </p>
-            <a
-              class="text-link"
-              href="./assets/robust-loop-shaping-report.pdf"
-              target="_blank"
-              rel="noopener"
-              >Open the report <span>↗</span></a
-            >
-          </div>
-          <div class="analysis-media analysis-media-pair">
-            <figure>
-              <img
-                src="./assets/robust-loop-shaping.webp"
-                alt="Complementary sensitivity curves compared with a multiplicative-uncertainty bound"
-              />
-              <figcaption>
-                Controller tuning against the uncertainty envelope.
-              </figcaption>
-            </figure>
-            <figure>
-              <img
-                src="./assets/robust-step.webp"
-                alt="Stable one-mode and ten-mode step responses for the lower-gain controller"
-              />
-              <figcaption>
-                One-mode and ten-mode responses remain closely aligned.
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="background-section"
-        id="background"
-        aria-labelledby="background-title"
-      >
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Background</p>
-            <h2 id="background-title">
-              Control theory grounded in thermofluids and buildable systems.
-            </h2>
-          </div>
-          <p>
-            Ongoing Ph.D. training in control theory, an M.S. focus in
-            thermofluids, and four years of vehicle-system design anchor the
-            work in physical dynamics and implementation.
-          </p>
-        </div>
-
-        <section class="skills-board" aria-labelledby="skills-title">
-          <div class="skills-intro">
-            <p class="eyebrow">Technical stack</p>
-            <h3 id="skills-title">
-              Methods organized by what they do in the loop.
-            </h3>
-          </div>
-          <dl class="skill-groups">
-            <div>
-              <dt>Control &amp; Optimization</dt>
-              <dd>
-                MPC, economic MPC, finite-horizon and constrained optimization,
-                optimal control, LQR/LQG, nonlinear, robust, and hybrid control
-              </dd>
-            </div>
-            <div>
-              <dt>Modeling &amp; Estimation</dt>
-              <dd>
-                State-space and distributed-parameter modeling, system
-                identification, finite differences, balanced truncation,
-                observers, Kalman filtering, model validation
-              </dd>
-            </div>
-            <div>
-              <dt>Data &amp; Machine Learning</dt>
-              <dd>
-                Python, OpenCV, MATLAB, sensor and experiment-log analysis,
-                classifier training and tuning, vision event detection and
-                automation
-              </dd>
-            </div>
-            <div>
-              <dt>Embedded &amp; Real-Time</dt>
-              <dd>
-                Simulink/QUARC, Raspberry Pi, Arduino, DAQ, sensor and actuator
-                integration, state-machine logic
-              </dd>
-            </div>
-            <div>
-              <dt>Physical Systems</dt>
-              <dd>
-                Mechatronics, Formula SAE EV systems, instrumentation,
-                design–build–test, SolidWorks, Fusion 360, fabrication
-              </dd>
-            </div>
-          </dl>
-        </section>
-
-        <div class="background-grid">
-          <section class="education-card" aria-labelledby="education-title">
-            <p class="eyebrow">Education</p>
-            <h3 id="education-title">UC Santa Barbara</h3>
-            <ol>
-              <li>
-                <div>
-                  <strong>Ph.D. Mechanical Engineering</strong
-                  ><span>Control Theory · GPA 3.91</span>
-                </div>
-                <time>Projected Jun 2029</time>
-                <p>
-                  Year 1 completed; available to take academic leave for
-                  full-time work.
-                </p>
-              </li>
-              <li>
-                <div>
-                  <strong>M.S. Mechanical Engineering</strong
-                  ><span>Thermofluids · GPA 3.90</span>
-                </div>
-                <time>Jul 2025</time>
-                <p>
-                  Experimental modeling, instrumentation, and data analysis.
-                </p>
-              </li>
-              <li>
-                <div>
-                  <strong>B.S. Mechanical Engineering</strong
-                  ><span>Product Design · GPA 3.76</span>
-                </div>
-                <time>Jun 2025</time>
-                <p>
-                  Capstone:
-                  <a
-                    href="https://capstone.engineering.ucsb.edu/projects/cat-carbon-accumulator"
-                    target="_blank"
-                    rel="noopener"
-                    >600 V Vehicle Battery Container ↗</a
-                  >
-                </p>
-              </li>
-            </ol>
-          </section>
-
-          <div class="experience-stack">
-            <article class="experience-card experience-dark">
-              <p class="research-label">
-                Gaucho Racing Formula SAE EV · Aug 2021 – Jun 2025
-              </p>
-              <h3>Vehicle Systems Lead / Vice President</h3>
-              <p>
-                Four-year design–build–test contributor. Led a 600 V
-                adhesive-joined accumulator container from CAD and drawings
-                through structural checks; led braking-system design,
-                manufacturing, testing, reliability, and a funded brake-fluid
-                viscosity study.
-              </p>
-            </article>
-            <article class="experience-card">
-              <p class="research-label">
-                UCSB Mechanical Engineering · Apr 2024 – Present
-              </p>
-              <h3>Teaching Assistant</h3>
-              <p>
-                Teach laboratory methods, dynamics, vibrations, and fluids
-                through lab sections, office hours, assessment, and technical
-                coaching.
-              </p>
-            </article>
-            <div class="honors-card">
-              <p>Engineering Honors Program</p>
-              <p>Dean’s Honors · 5 quarters</p>
-              <p>2 Undergraduate Research Awards · $3,750 + $2,500</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer class="site-footer">
-        <div>
-          <p class="eyebrow">The through-line</p>
-          <h2>
-            Build the model. Test the behavior. Keep the tradeoffs visible.
-          </h2>
-        </div>
-        <div class="footer-actions">
-          <a class="button button-light" href="mailto:rthirumaligai@gmail.com"
-            >Email</a
-          >
+    <div class="site-shell">
+      <aside class="site-sidebar" aria-label="Controls portfolio navigation">
+        <a class="sidebar-profile" href="../index.html?gpt">
+          <img
+            class="sidebar-avatar"
+            src="../images/pfp.webp"
+            alt="Raaghav Thirumaligai"
+          />
+          <strong>Raaghav Thirumaligai</strong>
+          <span>Controls + Optimization</span>
+          <span>Physical Systems</span>
+        </a>
+        <p class="sidebar-kicker">Controls portfolio</p>
+        <nav aria-label="Controls portfolio">
+          <a href="#main"><span>00</span>Overview</a>
+          <a href="#featured"><span>01</span>Featured work</a>
+          <a href="#research"><span>02</span>Research</a>
+          <a href="#more"><span>03</span>More analyses</a>
+          <a href="#background"><span>04</span>Background</a>
+        </nav>
+        <div class="sidebar-actions">
           <a
-            class="button button-outline-light"
-            href="https://www.linkedin.com/in/raaghav-thirumaligai-9309a5227"
-            target="_blank"
-            rel="noopener"
-            >LinkedIn ↗</a
-          >
-          <a
-            class="button button-outline-light"
             href="./assets/Raaghav_Thirumaligai_Controls_CV.pdf"
             target="_blank"
             rel="noopener"
             >Controls CV ↗</a
           >
+          <a class="nav-switch" href="../portfolio/?gpt"
+            >Prototyping portfolio ↗</a
+          >
         </div>
-        <p class="footer-contact">
-          <a href="mailto:rthirumaligai@gmail.com">rthirumaligai@gmail.com</a
-          ><span>·</span
-          ><a href="tel:+18186512193">(818)&nbsp;651&#8209;2193</a>
-        </p>
-      </footer>
-    </main>
+      </aside>
+
+      <main id="main">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow">Raaghav Thirumaligai · Controls portfolio</p>
+            <h1 id="hero-title">
+              Control physical systems from
+              <span>models, data, and constraints.</span>
+            </h1>
+            <p class="hero-lede">
+              I model dynamics, identify what matters, and turn feedback laws
+              into behavior—from a 99-state distributed system to hardware that
+              swings, balances, detects, and acts.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#featured"
+                >Explore the core projects</a
+              >
+              <a
+                class="button button-ghost"
+                href="./assets/Raaghav_Thirumaligai_Controls_CV.pdf"
+                target="_blank"
+                rel="noopener"
+                >Controls CV</a
+              >
+            </div>
+            <dl class="hero-metrics">
+              <div>
+                <dt>99</dt>
+                <dd>state PDE model</dd>
+              </div>
+              <div>
+                <dt>Real time</dt>
+                <dd>QUARC hardware control</dd>
+              </div>
+              <div>
+                <dt>4</dt>
+                <dd>featured control + ML builds</dd>
+              </div>
+            </dl>
+          </div>
+
+          <aside class="hero-console" aria-label="Controls workflow">
+            <div class="console-head">
+              <span>CONTROL LOOP</span>
+              <span class="console-live">ACTIVE</span>
+            </div>
+            <ol>
+              <li>
+                <span>01</span>
+                <div>
+                  <strong>Model</strong><small>physics + experiment logs</small>
+                </div>
+              </li>
+              <li>
+                <span>02</span>
+                <div>
+                  <strong>Estimate</strong><small>state + uncertainty</small>
+                </div>
+              </li>
+              <li>
+                <span>03</span>
+                <div>
+                  <strong>Optimize</strong
+                  ><small>objectives + constraints</small>
+                </div>
+              </li>
+              <li>
+                <span>04</span>
+                <div>
+                  <strong>Deploy</strong><small>software + hardware</small>
+                </div>
+              </li>
+            </ol>
+            <div class="console-trace" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+          </aside>
+        </section>
+
+        <section
+          class="section-shell"
+          id="featured"
+          aria-labelledby="featured-title"
+        >
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Featured work · 01/04</p>
+              <h2 id="featured-title">
+                The full loop, not just the controller.
+              </h2>
+            </div>
+            <p>
+              Each project follows evidence from model construction through
+              closed-loop behavior, with the tradeoffs and limits left visible.
+            </p>
+          </div>
+
+          <article class="project project-pde">
+            <div class="project-copy">
+              <p class="project-index">
+                01 · Distributed-parameter systems · Apr–Jun 2026
+              </p>
+              <h3>Reduce the model.<br />Keep the behavior.</h3>
+              <p class="project-summary">
+                A boundary-actuated damped-wave PDE became a practical LQG
+                study: discretize the field, shape disturbances, design output
+                feedback, then ask how much controller order the full plant
+                really needs.
+              </p>
+              <ul class="evidence-list">
+                <li>
+                  Built a 99-state finite-difference plant with frequency-shaped
+                  disturbances and measurement noise.
+                </li>
+                <li>
+                  Designed LQR and Kalman-filter controllers for three
+                  disturbance bandwidths.
+                </li>
+                <li>
+                  Tested balanced-truncation orders 1–10 on the unreduced plant
+                  across damping regimes.
+                </li>
+              </ul>
+              <p class="transfer-note">
+                <strong>Transferable method:</strong> distributed-field
+                modeling, reduction, disturbance estimation, and output
+                feedback—the same toolkit used when state is spread across a
+                thermal or energy system. This plant is simulated linear
+                acoustics, not a thermal experiment.
+              </p>
+              <div class="tag-row">
+                <span>LQG</span><span>Finite differences</span
+                ><span>Balanced truncation</span><span>MATLAB</span>
+              </div>
+              <a
+                class="text-link"
+                href="./assets/pde-lqg-report.pdf"
+                target="_blank"
+                rel="noopener"
+                >Read the technical report <span>↗</span></a
+              >
+            </div>
+
+            <div class="project-visual">
+              <figure>
+                <img
+                  src="./assets/pde-frequency.webp"
+                  alt="Closed-loop frequency responses for full-order and reduced-order LQG controllers"
+                />
+                <figcaption>
+                  Full-order response and reduced-order controller sweep on the
+                  same distributed plant.
+                </figcaption>
+              </figure>
+              <dl class="project-stats">
+                <div>
+                  <dt>99</dt>
+                  <dd>plant states</dd>
+                </div>
+                <div>
+                  <dt>1–10</dt>
+                  <dd>reduced orders</dd>
+                </div>
+                <div>
+                  <dt>3</dt>
+                  <dd>noise bandwidths</dd>
+                </div>
+              </dl>
+              <p class="project-result">
+                <strong>Reduction exposed a real boundary:</strong> 29/30 tested
+                controllers remained stable at β = 0.1, compared with 19/30 for
+                the lightly damped β = 0.001 plant.
+              </p>
+            </div>
+          </article>
+
+          <article class="project project-satellite project-reverse">
+            <div class="project-copy">
+              <p class="project-index">
+                02 · Constrained optimization · Jan–Mar 2026
+              </p>
+              <h3>Trade speed for effort—on purpose.</h3>
+              <p class="project-summary">
+                Three controllers, one six-state orbital model, and the same
+                randomized starts: a direct comparison of what changes when
+                limits and fuel priorities enter the objective.
+              </p>
+              <ul class="evidence-list">
+                <li>
+                  Zero-order-hold discretized Hill–Clohessy–Wiltshire relative
+                  dynamics at a 10-second sample time.
+                </li>
+                <li>
+                  Implemented saturated LQR, state-focused constrained MPC, and
+                  fuel-prioritized economic MPC.
+                </li>
+                <li>
+                  Compared feasibility, convergence, time, and cumulative
+                  <em>L</em><sub>1</sub> input effort across 50 matched cases.
+                </li>
+              </ul>
+              <div class="tag-row">
+                <span>MPC</span><span>Economic MPC</span><span>LQR</span
+                ><span>MPCTools</span><span>MATLAB</span>
+              </div>
+              <div class="project-links">
+                <a class="text-link" href="../project-satellite-MPC.html?gpt"
+                  >Open the full project <span>→</span></a
+                >
+                <a
+                  class="text-link"
+                  href="../assets/docs/projects/satellite-rendezvous/mpcFinalReport.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  >Report <span>↗</span></a
+                >
+              </div>
+            </div>
+
+            <div class="project-visual visual-light">
+              <figure>
+                <img
+                  src="../assets/images/projects/satellite-rendezvous/comparison_light.png"
+                  alt="Aggregate convergence, fuel proxy, and convergence-speed comparison for LQR and two MPC controllers"
+                />
+                <figcaption>
+                  Fifty randomized rendezvous cases. “Fuel” is cumulative input
+                  effort, not propellant mass.
+                </figcaption>
+              </figure>
+              <dl class="project-stats">
+                <div>
+                  <dt>±0.5</dt>
+                  <dd>mm/s² per axis</dd>
+                </div>
+                <div>
+                  <dt>50</dt>
+                  <dd>matched cases</dd>
+                </div>
+                <div>
+                  <dt>3</dt>
+                  <dd>controller priorities</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="project project-pendulum">
+            <div class="project-copy">
+              <p class="project-index">03 · Physical control · Apr–Jun 2025</p>
+              <h3>Identify it. Swing it. Catch it.</h3>
+              <p class="project-summary">
+                A physical cart-pendulum closed the gap between model
+                identification and real-time behavior through estimation, energy
+                shaping, local optimal control, and explicit mode transitions.
+              </p>
+              <ul class="evidence-list">
+                <li>
+                  Collected logarithmic sine-sweep data and identified models
+                  around stable and unstable equilibria.
+                </li>
+                <li>
+                  Combined energy-based swing-up with Kalman estimation and
+                  LQR/LQG balance and catch.
+                </li>
+                <li>
+                  Ran the three-mode state machine on hardware through MATLAB,
+                  Simulink, and QUARC.
+                </li>
+              </ul>
+              <div class="tag-row">
+                <span>System ID</span><span>LQR/LQG</span
+                ><span>Kalman filter</span><span>Hybrid control</span
+                ><span>QUARC</span>
+              </div>
+              <div class="project-links">
+                <a
+                  class="text-link"
+                  href="../project-inverted-pendulum.html?gpt"
+                  >Open the full project <span>→</span></a
+                >
+                <a
+                  class="text-link"
+                  href="https://www.youtube.com/watch?v=cFawTXDfmD8"
+                  target="_blank"
+                  rel="noopener"
+                  >Hardware demo <span>↗</span></a
+                >
+              </div>
+            </div>
+
+            <div class="project-visual visual-light">
+              <figure>
+                <img
+                  src="../assets/images/projects/inverted-pendulum/systemControllers.png"
+                  alt="Swing-up, balancing, and catching control regions for the inverted pendulum"
+                />
+                <figcaption>
+                  Three controllers coordinated by state-dependent switching.
+                  Rail impacts and encoder rollover remained explicit failure
+                  modes.
+                </figcaption>
+              </figure>
+              <dl class="project-stats">
+                <div>
+                  <dt>0.3–3</dt>
+                  <dd>Hz identification sweep</dd>
+                </div>
+                <div>
+                  <dt>30</dt>
+                  <dd>experiment trials</dd>
+                </div>
+                <div>
+                  <dt>3</dt>
+                  <dd>control modes</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="project project-clean project-reverse">
+            <div class="project-copy">
+              <p class="project-index">
+                04 · ML + embedded autonomy · Apr–Jun 2024
+              </p>
+              <h3>Perception becomes motion.</h3>
+              <p class="project-summary">
+                C.L.E.A.N. brought classical machine learning into a physical
+                loop: detect a can, steer toward it, verify the material, and
+                coordinate a tracked base with a two-degree-of-freedom arm.
+              </p>
+              <ul class="evidence-list">
+                <li>
+                  Led five people through weekly mechanical, electrical, and
+                  software build–test cycles.
+                </li>
+                <li>
+                  Trained and tuned a nine-stage OpenCV cascade on approximately
+                  1,500 custom images.
+                </li>
+                <li>
+                  Integrated Raspberry Pi steering, Arduino motor control,
+                  ultrasonic and inductive sensing, and a worm-gear arm and
+                  claw.
+                </li>
+              </ul>
+              <div class="tag-row">
+                <span>OpenCV</span><span>Raspberry Pi</span><span>Arduino</span
+                ><span>State logic</span><span>Mechatronics</span>
+              </div>
+              <a class="text-link" href="../portfolio/?gpt#clean"
+                >See the integrated prototype story <span>→</span></a
+              >
+            </div>
+
+            <div class="project-visual visual-poster">
+              <figure>
+                <img
+                  src="../portfolio/assets/clean-poster.webp"
+                  alt="C.L.E.A.N. project poster showing the autonomous robot, computer vision, mechanical system, electronics, and results"
+                />
+                <figcaption>
+                  A ten-week team prototype. The classifier is a classical
+                  OpenCV cascade—not a neural network.
+                </figcaption>
+              </figure>
+              <dl class="project-stats">
+                <div>
+                  <dt>5</dt>
+                  <dd>person team</dd>
+                </div>
+                <div>
+                  <dt>~1,500</dt>
+                  <dd>custom images</dd>
+                </div>
+                <div>
+                  <dt>10</dt>
+                  <dd>build–test weeks</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+        </section>
+
+        <section class="matrix-section" aria-labelledby="matrix-title">
+          <div class="section-heading section-heading-light">
+            <div>
+              <p class="eyebrow">Technical map</p>
+              <h2 id="matrix-title">One practice, four kinds of evidence.</h2>
+            </div>
+            <p>
+              Move across the row to see where each project gets its model, how
+              state is inferred, what closes the loop, and where the result was
+              tested.
+            </p>
+          </div>
+
+          <table class="technical-matrix">
+            <caption>
+              Methods across the four featured projects
+            </caption>
+            <thead>
+              <tr class="matrix-row matrix-head">
+                <th scope="col">Project</th>
+                <th scope="col">Model</th>
+                <th scope="col">Estimate</th>
+                <th scope="col">Control / decision</th>
+                <th scope="col">Evidence</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="matrix-row">
+                <th scope="row">Distributed PDE</th>
+                <td>Finite-difference acoustic field</td>
+                <td>Kalman filter</td>
+                <td>LQG + model reduction</td>
+                <td>Full-plant simulation</td>
+              </tr>
+              <tr class="matrix-row">
+                <th scope="row">Satellite MPC</th>
+                <td>ZOH HCW dynamics</td>
+                <td>Full-state simulation</td>
+                <td>LQR + MPC + economic MPC</td>
+                <td>50 matched cases</td>
+              </tr>
+              <tr class="matrix-row">
+                <th scope="row">Cart-pendulum</th>
+                <td>Experimental system ID</td>
+                <td>Kalman filter</td>
+                <td>Energy + LQR/LQG + modes</td>
+                <td>Real-time hardware</td>
+              </tr>
+              <tr class="matrix-row">
+                <th scope="row">C.L.E.A.N.</th>
+                <td>Vision + sensor geometry</td>
+                <td>Cascade detector + sensors</td>
+                <td>Steering + state logic</td>
+                <td>Integrated robot</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section
+          class="research-section"
+          id="research"
+          aria-labelledby="research-title"
+        >
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Research + experimental systems</p>
+              <h2 id="research-title">
+                Feedback thinking across biology, fluids, and instruments.
+              </h2>
+            </div>
+            <p>
+              The common work is reconstructing dynamics from partial
+              measurements, then building the model, detector, or apparatus
+              needed to make the next decision trustworthy.
+            </p>
+          </div>
+
+          <div class="research-grid">
+            <article class="research-card">
+              <div class="research-meta">
+                <span>01</span><time>Jan 2025 – Jan 2026</time>
+              </div>
+              <p class="research-label">Biological Control Lab · Yeung UCSB</p>
+              <h3>
+                Transcription and DNA supercoiling as a coupled control system
+              </h3>
+              <p>
+                Co-developed a control-oriented model of genome-wide
+                transcription coupled to topoisomerase-regulated supercoiling.
+                Used stability and sensitivity analysis on stochastic and
+                nonlinear population models to identify parameters shaping
+                transcription and growth.
+              </p>
+              <a
+                class="text-link"
+                href="https://www.biorxiv.org/content/10.1101/2025.05.26.655193"
+                target="_blank"
+                rel="noopener"
+                >Accepted manuscript · bioRxiv preprint <span>↗</span></a
+              >
+            </article>
+
+            <article class="research-card">
+              <div class="research-meta">
+                <span>02</span><time>Aug 2024 – Jun 2025</time>
+              </div>
+              <p class="research-label">
+                M&amp;M Flow Lab · Master’s researcher
+              </p>
+              <h3>Detecting stochastic clogging with limited visibility</h3>
+              <p>
+                Studied particle-laden suspension clogging under changing
+                material conditions. Prototyped a Python rolling-brightness and
+                windowed-visibility detector for event logging and
+                post-analysis; presented at APS DFD in November 2024.
+              </p>
+              <div class="tag-row">
+                <span>Python</span><span>Vision metric</span
+                ><span>Experiment logs</span><span>Thermofluids</span>
+              </div>
+            </article>
+
+            <article class="research-card">
+              <div class="research-meta">
+                <span>03</span><time>Jan 2023 – Aug 2024</time>
+              </div>
+              <p class="research-label">
+                M&amp;M Flow Lab · Undergraduate researcher
+              </p>
+              <h3>Instrumentation for repeatable granular-flow experiments</h3>
+              <p>
+                Designed and built an annular shear cell, then developed an
+                Arduino–MATLAB strain-gauge calibration, filtering, and DAQ
+                workflow. Presented the results at the Southern California Flow
+                Physics Symposium.
+              </p>
+              <div class="tag-row">
+                <span>Arduino</span><span>MATLAB</span><span>Strain gauges</span
+                ><span>Fabrication</span>
+              </div>
+            </article>
+
+            <article class="research-card">
+              <div class="research-meta">
+                <span>04</span><time>Jun 2023 – Oct 2023</time>
+              </div>
+              <p class="research-label">
+                Fluid Energy Science Lab · Undergraduate researcher
+              </p>
+              <h3>Wind-tunnel measurement from apparatus to dataset</h3>
+              <p>
+                Collected wake-model verification data, built an Arduino–MATLAB
+                DAQ system and app, and fabricated laser-cut and 3D-printed
+                annuli for repeatable wind-energy experiments.
+              </p>
+              <div class="tag-row">
+                <span>Wind tunnel</span><span>DAQ</span
+                ><span>Rapid fabrication</span><span>Model validation</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="bonus-section" id="more" aria-labelledby="more-title">
+          <div class="section-heading section-heading-dark">
+            <div>
+              <p class="eyebrow">More analyses · supplementary work</p>
+              <h2 id="more-title">Control ideas outside the core four.</h2>
+            </div>
+            <p>
+              Three compact studies extend the portfolio into hybrid biology,
+              biologically inspired computation, and robust loop-shaping. Select
+              a tab to open the evidence.
+            </p>
+          </div>
+
+          <div
+            class="analysis-tabs"
+            role="tablist"
+            aria-label="Supplementary controls analyses"
+          >
+            <button
+              type="button"
+              role="tab"
+              id="tab-dna"
+              aria-controls="panel-dna"
+              aria-selected="true"
+              data-tab="dna"
+            >
+              <span>01</span>Hybrid DNA dynamics
+            </button>
+            <button
+              type="button"
+              role="tab"
+              id="tab-astro"
+              aria-controls="panel-astro"
+              aria-selected="false"
+              data-tab="astro"
+              tabindex="-1"
+            >
+              <span>02</span>Biological self-attention
+            </button>
+            <button
+              type="button"
+              role="tab"
+              id="tab-robust"
+              aria-controls="panel-robust"
+              aria-selected="false"
+              data-tab="robust"
+              tabindex="-1"
+            >
+              <span>03</span>Robust loop-shaping
+            </button>
+          </div>
+
+          <div
+            class="analysis-panel is-active"
+            id="panel-dna"
+            role="tabpanel"
+            aria-labelledby="tab-dna"
+            data-tab-panel="dna"
+          >
+            <div class="analysis-copy">
+              <p class="analysis-status">Modeled + simulated course research</p>
+              <h3>Hybrid Dynamics of DNA Supercoiling Regulation</h3>
+              <p>
+                Modeled continuous mechanical relaxation interrupted by
+                threshold- and dwell-time-triggered enzyme jumps, making a
+                biological homeostasis question explicit as a hybrid automaton.
+              </p>
+              <ul class="evidence-list evidence-on-dark">
+                <li>
+                  Defined flow and jump maps, enzyme-reset timing, and a
+                  homeostatic target band.
+                </li>
+                <li>
+                  Derived a candidate dwell-time bound and explored weak forward
+                  invariance.
+                </li>
+                <li>
+                  Ran MATLAB Hybrid Systems Toolbox ensembles and enzyme-action
+                  ablations.
+                </li>
+              </ul>
+              <p class="scope-note">
+                <strong>Scope:</strong> derived and numerically explored; this
+                version does not claim global asymptotic stability or strong
+                forward invariance.
+              </p>
+              <a
+                class="text-link"
+                href="./assets/dna-hybrid-report.pdf"
+                target="_blank"
+                rel="noopener"
+                >Open the report <span>↗</span></a
+              >
+            </div>
+            <div class="analysis-media analysis-media-pair">
+              <figure>
+                <img
+                  src="./assets/dna-hybrid-automaton.webp"
+                  alt="Hybrid automaton with DNA-supercoiling flow, topoisomerase jump, and gyrase jump modes"
+                />
+                <figcaption>
+                  Flow and enzyme-triggered jump structure.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="./assets/dna-hybrid-trajectory.webp"
+                  alt="Simulated DNA supercoiling trajectory with continuous arcs, discrete jumps, and target band"
+                />
+                <figcaption>
+                  One trajectory exposes continuous arcs, jumps, and the target
+                  band.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div
+            class="analysis-panel"
+            id="panel-astro"
+            role="tabpanel"
+            aria-labelledby="tab-astro"
+            data-tab-panel="astro"
+            hidden
+          >
+            <div class="analysis-copy">
+              <p class="analysis-status">
+                Literature synthesis + reproduction / extension
+              </p>
+              <h3>Biological Self-Attention: Neuron–Astrocyte Networks</h3>
+              <p>
+                Mapped a published neuron–astrocyte circuit onto query, key,
+                value, read/write, and normalization operations, then extended
+                its ALBERT normalization comparison to biologically motivated
+                widths.
+              </p>
+              <ul class="evidence-list evidence-on-dark">
+                <li>
+                  Explained how alternating neural and astrocyte dynamics can
+                  approximate attention normalization.
+                </li>
+                <li>
+                  Compared rodent- and human-scale influence widths with an
+                  ALBERT softmax trace over roughly 200 tokens.
+                </li>
+                <li>
+                  Observed a qualitative trend toward closer tracking at the
+                  larger width.
+                </li>
+              </ul>
+              <p class="scope-note">
+                <strong>Scope:</strong> exploratory reproduction of published
+                Kozachkov et al. work—not a newly invented or trained
+                transformer and not biological validation.
+              </p>
+              <a
+                class="text-link"
+                href="./assets/astrocyte-attention-report.pdf"
+                target="_blank"
+                rel="noopener"
+                >Open the report <span>↗</span></a
+              >
+            </div>
+            <div class="analysis-media analysis-media-pair">
+              <figure>
+                <img
+                  src="./assets/astrocyte-attention.webp"
+                  alt="Comparison between rodent-scale and human-scale astrocyte normalization traces and ALBERT softmax"
+                />
+                <figcaption>
+                  Qualitative normalization comparison at two biologically
+                  motivated widths.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="./assets/astrocyte-circuit.webp"
+                  alt="Neuron and astrocyte circuit diagram used to explain biological self-attention"
+                />
+                <figcaption>
+                  Published circuit interpreted through an attention lens.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div
+            class="analysis-panel"
+            id="panel-robust"
+            role="tabpanel"
+            aria-labelledby="tab-robust"
+            data-tab-panel="robust"
+            hidden
+          >
+            <div class="analysis-copy">
+              <p class="analysis-status">Modeled + simulated course analysis</p>
+              <h3>Robust Loop-Shaping for a Flexible Multimode Plant</h3>
+              <p>
+                Used zero-, one-, and ten-mode models to expose the cost of
+                neglected resonances, then shaped complementary sensitivity
+                against a multiplicative-uncertainty bound.
+              </p>
+              <ul class="evidence-list evidence-on-dark">
+                <li>
+                  Built a 22nd-order “true” flexible plant from ten quadratic
+                  modal factors.
+                </li>
+                <li>
+                  Showed an aggressive nominal controller destabilizing the
+                  ten-mode system.
+                </li>
+                <li>
+                  Tuned a lower-gain design that remained bounded with closely
+                  matched one- and ten-mode step responses.
+                </li>
+              </ul>
+              <p class="scope-note">
+                <strong>Scope:</strong> MATLAB simulation and loop-shaping—not
+                implemented <em>H</em><sub>∞</sub> synthesis, certified robust
+                performance, or hardware control.
+              </p>
+              <a
+                class="text-link"
+                href="./assets/robust-loop-shaping-report.pdf"
+                target="_blank"
+                rel="noopener"
+                >Open the report <span>↗</span></a
+              >
+            </div>
+            <div class="analysis-media analysis-media-pair">
+              <figure>
+                <img
+                  src="./assets/robust-loop-shaping.webp"
+                  alt="Complementary sensitivity curves compared with a multiplicative-uncertainty bound"
+                />
+                <figcaption>
+                  Controller tuning against the uncertainty envelope.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="./assets/robust-step.webp"
+                  alt="Stable one-mode and ten-mode step responses for the lower-gain controller"
+                />
+                <figcaption>
+                  One-mode and ten-mode responses remain closely aligned.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="background-section"
+          id="background"
+          aria-labelledby="background-title"
+        >
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Background</p>
+              <h2 id="background-title">
+                Control theory grounded in thermofluids and buildable systems.
+              </h2>
+            </div>
+            <p>
+              Ongoing Ph.D. training in control theory, an M.S. focus in
+              thermofluids, and four years of vehicle-system design anchor the
+              work in physical dynamics and implementation.
+            </p>
+          </div>
+
+          <section class="skills-board" aria-labelledby="skills-title">
+            <div class="skills-intro">
+              <p class="eyebrow">Technical stack</p>
+              <h3 id="skills-title">
+                Methods organized by what they do in the loop.
+              </h3>
+            </div>
+            <dl class="skill-groups">
+              <div>
+                <dt>Control &amp; Optimization</dt>
+                <dd>
+                  MPC, economic MPC, finite-horizon and constrained
+                  optimization, optimal control, LQR/LQG, nonlinear, robust, and
+                  hybrid control
+                </dd>
+              </div>
+              <div>
+                <dt>Modeling &amp; Estimation</dt>
+                <dd>
+                  State-space and distributed-parameter modeling, system
+                  identification, finite differences, balanced truncation,
+                  observers, Kalman filtering, model validation
+                </dd>
+              </div>
+              <div>
+                <dt>Data &amp; Machine Learning</dt>
+                <dd>
+                  Python, OpenCV, MATLAB, sensor and experiment-log analysis,
+                  classifier training and tuning, vision event detection and
+                  automation
+                </dd>
+              </div>
+              <div>
+                <dt>Embedded &amp; Real-Time</dt>
+                <dd>
+                  Simulink/QUARC, Raspberry Pi, Arduino, DAQ, sensor and
+                  actuator integration, state-machine logic
+                </dd>
+              </div>
+              <div>
+                <dt>Physical Systems</dt>
+                <dd>
+                  Mechatronics, Formula SAE EV systems, instrumentation,
+                  design–build–test, SolidWorks, Fusion 360, fabrication
+                </dd>
+              </div>
+            </dl>
+          </section>
+
+          <div class="background-grid">
+            <section class="education-card" aria-labelledby="education-title">
+              <p class="eyebrow">Education</p>
+              <h3 id="education-title">UC Santa Barbara</h3>
+              <ol>
+                <li>
+                  <div>
+                    <strong>Ph.D. Mechanical Engineering</strong
+                    ><span>Control Theory · GPA 3.91</span>
+                  </div>
+                  <time>Projected Jun 2029</time>
+                  <p>
+                    Year 1 completed; available to take academic leave for
+                    full-time work.
+                  </p>
+                </li>
+                <li>
+                  <div>
+                    <strong>M.S. Mechanical Engineering</strong
+                    ><span>Thermofluids · GPA 3.90</span>
+                  </div>
+                  <time>Jul 2025</time>
+                  <p>
+                    Experimental modeling, instrumentation, and data analysis.
+                  </p>
+                </li>
+                <li>
+                  <div>
+                    <strong>B.S. Mechanical Engineering</strong
+                    ><span>Product Design · GPA 3.76</span>
+                  </div>
+                  <time>Jun 2025</time>
+                  <p>
+                    Capstone:
+                    <a
+                      href="https://capstone.engineering.ucsb.edu/projects/cat-carbon-accumulator"
+                      target="_blank"
+                      rel="noopener"
+                      >600 V Vehicle Battery Container ↗</a
+                    >
+                  </p>
+                </li>
+              </ol>
+            </section>
+
+            <div class="experience-stack">
+              <article class="experience-card experience-dark">
+                <p class="research-label">
+                  Gaucho Racing Formula SAE EV · Aug 2021 – Jun 2025
+                </p>
+                <h3>Vehicle Systems Lead / Vice President</h3>
+                <p>
+                  Four-year design–build–test contributor. Led a 600 V
+                  adhesive-joined accumulator container from CAD and drawings
+                  through structural checks; led braking-system design,
+                  manufacturing, testing, reliability, and a funded brake-fluid
+                  viscosity study.
+                </p>
+              </article>
+              <article class="experience-card">
+                <p class="research-label">
+                  UCSB Mechanical Engineering · Apr 2024 – Present
+                </p>
+                <h3>Teaching Assistant</h3>
+                <p>
+                  Teach laboratory methods, dynamics, vibrations, and fluids
+                  through lab sections, office hours, assessment, and technical
+                  coaching.
+                </p>
+              </article>
+              <div class="honors-card">
+                <p>Engineering Honors Program</p>
+                <p>Dean’s Honors · 5 quarters</p>
+                <p>2 Undergraduate Research Awards · $3,750 + $2,500</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <div>
+            <p class="eyebrow">The through-line</p>
+            <h2>
+              Build the model. Test the behavior. Keep the tradeoffs visible.
+            </h2>
+          </div>
+          <div class="footer-actions">
+            <a class="button button-light" href="mailto:rthirumaligai@gmail.com"
+              >Email</a
+            >
+            <a
+              class="button button-outline-light"
+              href="https://www.linkedin.com/in/raaghav-thirumaligai-9309a5227"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn ↗</a
+            >
+            <a
+              class="button button-outline-light"
+              href="./assets/Raaghav_Thirumaligai_Controls_CV.pdf"
+              target="_blank"
+              rel="noopener"
+              >Controls CV ↗</a
+            >
+          </div>
+          <p class="footer-contact">
+            <a href="mailto:rthirumaligai@gmail.com">rthirumaligai@gmail.com</a
+            ><span>·</span
+            ><a href="tel:+18186512193">(818)&nbsp;651&#8209;2193</a>
+          </p>
+        </footer>
+      </main>
+    </div>
 
     <script src="./ctrl.js"></script>
     <script src="../assets/js/visit-notify.js"></script>
