@@ -1,14 +1,4 @@
 (function () {
-  var header = document.querySelector("[data-site-header]");
-  if (header) {
-    function updateHeader() {
-      header.classList.toggle("is-scrolled", window.scrollY > 24);
-    }
-
-    updateHeader();
-    window.addEventListener("scroll", updateHeader, { passive: true });
-  }
-
   var tabs = Array.prototype.slice.call(
     document.querySelectorAll("[data-tab]"),
   );
