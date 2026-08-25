@@ -1,4 +1,14 @@
 (function () {
+  // Pages using the shared navigation automatically receive visit tracking.
+  // This keeps new navigation-based pages from needing a second script tag.
+  var currentScript = document.currentScript;
+  if (currentScript && !document.querySelector('script[data-visit-notify]')) {
+    var notifier = document.createElement("script");
+    notifier.src = new URL("visit-notify.js", currentScript.src).href;
+    notifier.dataset.visitNotify = "";
+    document.head.appendChild(notifier);
+  }
+
   var targets = document.querySelectorAll('[data-include="nav"]');
   if (!targets.length) return;
 
