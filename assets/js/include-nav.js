@@ -30,7 +30,7 @@
     });
   }
 
-  fetch("/partials/nav.html")
+  fetch("/partials/nav.html", { cache: "no-cache" })
     .then(function (res) { return res.text(); })
     .then(function (html) {
       targets.forEach(function (target) {
