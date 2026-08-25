@@ -228,6 +228,8 @@ a { color: inherit; }
 .button:focus-visible { transform: translateY(-2px); }
 .button-primary { background: var(--ink); color: white; box-shadow: 0 10px 24px rgba(23, 22, 27, 0.16); }
 .button-secondary { border: 1px solid var(--line); background: rgba(255,255,255,0.64); color: var(--ink); }
+.button-controls { background: #173653; color: white; box-shadow: 0 10px 24px rgba(23, 54, 83, 0.2); }
+.button-prototyping { background: var(--pink); color: white; box-shadow: 0 10px 24px rgba(189, 27, 115, 0.2); }
 
 .kpis {
   margin-top: 40px;
