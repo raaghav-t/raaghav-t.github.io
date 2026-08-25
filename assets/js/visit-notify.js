@@ -1,16 +1,5 @@
 (() => {
-  const endpoint = "https://script.google.com/macros/s/AKfycbxT_U2Ng1TxHFcVNzh0MaHxfr1jwAkpaEnI1M4FZNMwwmAbQ-nSl-m1iwwVwS0ZQR0m/exec";
-
-  const pageNames = {
-    "/": "Homepage",
-    "/portfolio/": "Portfolio",
-    "/cv.html": "CV",
-    "/projects.html": "Projects",
-    "/research.html": "Research",
-    "/project-satellite-MPC.html": "Satellite Rendezvous",
-    "/project-krk-GameTheory.html": "KRK Solver",
-    "/project-inverted-pendulum.html": "Inverted Pendulum",
-  };
+  const endpoint = "https://script.google.com/macros/s/AKfycbyHEDITtPmHTkJD_6oPEvoKr6sfRWSi_Y8Inh2O3hEiyKbQbzzFa6x8itoyThb0zplx/exec";
 
   const normalizePath = (path) => {
     if (path === "/portfolio") return "/portfolio/";
@@ -27,7 +16,8 @@
     : "Browser";
 
   const payload = JSON.stringify({
-    page: pageNames[path] || document.title || "Website",
+    page: document.title || "Website",
+    hostname: window.location.hostname,
     path,
     sourceTag,
     visitType,
