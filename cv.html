@@ -2,21 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raaghav Thirumaligai - CV</title>
-  <style>
-    html, body {
-      margin: 0;
-      height: 100%;
-    }
-    iframe {
-      border: none;
-      width: 100%;
-      height: 100%;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;family=Sora:wght@500;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/glass.css" />
 </head>
-<body>
-  <iframe src="cv_RaaghavThirumaligai.pdf"></iframe>
-  <script src="assets/js/visit-notify.js"></script>
+<body data-nav="cv" class="cv-page">
+  <div class="bg-blobs" aria-hidden="true"><div class="blob a"></div><div class="blob b"></div><div class="blob c"></div></div>
+  <div class="shell">
+    <div data-include="nav"></div>
+    <main class="content glass">
+      <section class="cv-heading">
+        <div>
+          <p class="eyebrow">Curriculum vitae</p>
+          <h1>Experience, research,<br /><span>and technical work.</span></h1>
+        </div>
+        <a class="button button-primary" href="cv_RaaghavThirumaligai.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
+      </section>
+      <iframe class="cv-frame" title="Raaghav Thirumaligai curriculum vitae" src="cv_RaaghavThirumaligai.pdf"></iframe>
+    </main>
+  </div>
+  <script src="assets/js/include-nav.js"></script>
+  <script src="assets/js/glass.js"></script>
 </body>
 </html>

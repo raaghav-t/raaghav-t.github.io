@@ -5,9 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Raaghav Thirumaligai</title>
+  <meta name="description" content="Technical case studies in model predictive control, game theory, system identification, and hardware control." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/glass.css" />
 </head>
 
@@ -23,13 +24,14 @@
 
     <main class="content glass">
       <section class="hero glass">
-        <h1>Projects (wip)</h1>
-        <p>This page is the hub for all project writeups. Each preview links to a dedicated project page in the same liquid-glass format, ready for deep technical breakdowns, figures, and results.</p>
+        <p class="eyebrow">Selected technical work</p>
+        <h1>Models become decisions.<br /><span>Decisions become behavior.</span></h1>
+        <p class="hero-lede">Three focused case studies spanning constrained optimization, adversarial planning, system identification, and real-time hardware control.</p>
       </section>
 
       <section class="grid">
         <article class="card glass span-7">
-          <h2>Project Previews</h2>
+          <h2>Project case studies</h2>
           <a class="preview-link" href="project-satellite-MPC.html">
             <h3>Constrained Satellite Rendezvous (MPC)</h3>
             <p>Zero-order-hold HCW modeling with LQR, constrained MPC, and economic MPC fuel-vs-speed tradeoff analysis.</p>
@@ -49,14 +51,18 @@
         </article>
 
         <article class="card glass span-5">
-          <h2>Image Space</h2>
-          <div class="img-slot">Project collage / hero image placeholder</div>
-          <p class="muted">Use this panel for a featured project photo, schematic, or animation preview.</p>
+          <h2>How I work</h2>
+          <div class="method-list">
+            <div><span>01</span><strong>Model</strong><p>Start with the simplest dynamics that retain the behavior.</p></div>
+            <div><span>02</span><strong>Test</strong><p>Use simulation or hardware evidence to expose bad assumptions.</p></div>
+            <div><span>03</span><strong>Iterate</strong><p>Refine the controller, constraints, and implementation together.</p></div>
+          </div>
         </article>
 
         <article class="card glass span-12">
-          <h2>Notes</h2>
-          <div class="filler">Filler space: add your project selection logic, update cadence, and where to find source files, demos, and publications.</div>
+          <h2>More controls work</h2>
+          <p>For distributed systems, robotics, experimental automation, and additional analyses, visit the dedicated controls portfolio.</p>
+          <a class="button button-primary" href="ctrl/">Open controls portfolio</a>
         </article>
       </section>
     </main>

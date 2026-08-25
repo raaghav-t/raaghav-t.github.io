@@ -53,11 +53,6 @@ body.portfolio-page {
   border-radius: 34px;
 }
 
-.portfolio-page .nav [data-nav-item="projects"],
-.portfolio-page .nav [data-nav-item="research"] {
-  display: none;
-}
-
 .portfolio-content {
   --portfolio-content-pad: clamp(18px, 3vw, 42px);
   padding: var(--portfolio-content-pad);
