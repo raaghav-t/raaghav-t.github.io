@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frame — an ambient iPad dashboard | Raaghav Thirumaligai</title>
+  <meta name="description" content="Frame is a design-first iPadOS prototype that turns a spare iPad into a calm, persistent view of the day and home." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Frame — an ambient iPad dashboard" />
+  <meta property="og:description" content="A calm, persistent view of the day, the home, and what needs attention next." />
+  <meta property="og:url" content="https://raaghavt.com/frame/" />
+  <meta property="og:image" content="https://raaghavt.com/frame/assets/screens/doorbell.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Frame — an ambient iPad dashboard" />
+  <meta name="twitter:description" content="A spare iPad, made useful." />
+  <meta name="twitter:image" content="https://raaghavt.com/frame/assets/screens/doorbell.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/glass.css" />
+  <link rel="stylesheet" href="./frame.css" />
+</head>
+
+<body class="frame-page" data-nav="frame">
+  <div class="frame-aurora frame-aurora-one" aria-hidden="true"></div>
+  <div class="frame-aurora frame-aurora-two" aria-hidden="true"></div>
+  <div class="frame-aurora frame-aurora-three" aria-hidden="true"></div>
+
+  <div class="shell frame-shell">
+    <div data-include="nav"></div>
+
+    <main class="content frame-content">
+      <section class="frame-hero" aria-labelledby="frame-title">
+        <div class="frame-hero-copy">
+          <div class="frame-lockup" aria-label="Frame">
+            <span class="frame-mark" aria-hidden="true"><i></i></span>
+            <span>Frame</span>
+          </div>
+          <p class="eyebrow">Native iPadOS product · Functional prototype</p>
+          <h1 id="frame-title">A spare iPad becomes<br /><span>an ambient dashboard.</span></h1>
+          <p class="frame-lede">Frame turns an unused iPad into a calm, persistent view of what matters right now: the time, the weather, the next event, and one view into home.</p>
+          <div class="frame-actions">
+            <a class="button frame-button-primary" href="#experience">See Frame in use <span aria-hidden="true">↓</span></a>
+            <a class="button frame-button-secondary" href="../portfolio/#frame">Portfolio context <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="frame-hero-facts" aria-label="Frame project facts">
+            <div><strong>iPadOS</strong><span>Landscape, always-on context</span></div>
+            <div><strong>SwiftUI</strong><span>State-driven interface</span></div>
+            <div><strong>Local first</strong><span>No recording or upload</span></div>
+          </div>
+        </div>
+
+        <figure class="frame-hero-visual">
+          <div class="frame-device">
+            <div class="frame-device-topline"><span>FRAME / REAL HOMEKIT CAPTURE</span><span class="frame-live-label"><i></i> Doorbell feed</span></div>
+            <img src="./assets/screens/doorbell.png" alt="Frame dashboard showing a real Doorbell camera feed alongside HomeKit controls and weather" width="1800" height="1250" />
+            <div class="frame-device-glint" aria-hidden="true"></div>
+          </div>
+          <figcaption>Frame keeps context small and the viewing canvas large. This capture shows a connected Doorbell feed with HomeKit controls around it.</figcaption>
+        </figure>
+      </section>
+
+      <section class="frame-section frame-premise" id="premise" aria-labelledby="premise-title">
+        <div class="frame-section-heading">
+          <div>
+            <p class="eyebrow">The premise</p>
+            <h2 id="premise-title">Information earns its place by helping you decide what to do next.</h2>
+          </div>
+          <p>Most dashboards ask you to manage a collection of widgets. Frame asks a quieter question: what would be useful to notice from across the room?</p>
+        </div>
+
+        <div class="frame-story-grid">
+          <article class="frame-story-card">
+            <span class="frame-card-number">01</span>
+            <h3>Ambient first</h3>
+            <p>Time, greeting, weather, and the next relevant change are available at a glance, without turning the iPad into another inbox.</p>
+          </article>
+          <article class="frame-story-card frame-story-card-accent">
+            <span class="frame-card-number">02</span>
+            <h3>One view, not a wall of widgets</h3>
+            <p>The camera or Mirror canvas gets the largest surface. Supporting information stays quiet until it earns a tap.</p>
+          </article>
+          <article class="frame-story-card">
+            <span class="frame-card-number">03</span>
+            <h3>Useful even when a source is not</h3>
+            <p>Permission denied, offline, empty, and unavailable are designed states. The interface says what happened and keeps the rest of the day visible.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="frame-section frame-origin" aria-labelledby="origin-title">
+        <figure class="frame-sketch-card">
+          <a href="./assets/frame-sketch.png" target="_blank" rel="noopener" aria-label="Open the original Frame concept sketch full screen">
+            <img src="./assets/frame-sketch.png" alt="Original Frame concept sketch showing a wall-mounted iPad, a dashboard layout, and notes about camera feeds and home context" loading="lazy" width="2400" height="1126" />
+          </a>
+          <figcaption>From the first sketch: a spare iPad as a window into the home, not another destination to open.</figcaption>
+        </figure>
+        <div class="frame-origin-copy">
+          <p class="eyebrow">From sketch to surface</p>
+          <h2 id="origin-title">Start with the physical situation.</h2>
+          <p>The original idea began with a wall: if an iPad is already present, it can mediate between the room and the person without asking for the ritual of picking up a phone.</p>
+          <p>The sketch became a real SwiftUI prototype with an ambient header, prioritized Updates, a swipeable feed carousel, and a settings surface for the choices that should stay persistent.</p>
+          <a class="text-link" href="./assets/frame-sketch.pdf" target="_blank" rel="noopener">Open the concept sketch PDF <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="frame-section frame-experience" id="experience" aria-labelledby="experience-title">
+        <div class="frame-section-heading">
+          <div>
+            <p class="eyebrow">The product surface</p>
+            <h2 id="experience-title">One calm surface, different moments.</h2>
+          </div>
+          <p>Frame is intentionally progressive: the default dashboard is glanceable, while a tap opens the detail needed for calendars, home controls, music, or settings.</p>
+        </div>
+
+        <div class="frame-gallery">
+          <figure class="frame-gallery-feature">
+            <img src="./assets/screens/map.png" alt="Frame map view showing an upcoming event, driving estimate, calendar updates, and ambient music" loading="lazy" width="1800" height="1250" />
+            <figcaption><strong>01 / Follow what’s next</strong><span>A real map and Updates state brings an upcoming event, route estimate, and music together.</span></figcaption>
+          </figure>
+          <div class="frame-gallery-stack">
+            <figure>
+              <img src="./assets/screens/home-controls.png" alt="Frame home controls panel with a permission-aware Home access state" loading="lazy" width="1800" height="1251" />
+              <figcaption><strong>02 / Reveal the home</strong><span>HomeKit controls appear as a focused side panel.</span></figcaption>
+            </figure>
+            <figure>
+              <img src="./assets/screens/updates-detail.png" alt="Frame Updates detail sheet showing an approved calendar event" loading="lazy" width="1800" height="1251" />
+              <figcaption><strong>03 / Explain the change</strong><span>Updates expands into a readable detail view.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="frame-evidence-note">
+          <span class="frame-note-icon" aria-hidden="true">i</span>
+          <p><strong>Current evidence:</strong> the lead captures above show real HomeKit and map/Updates examples. The supporting captures are deterministic demo states; camera, Photos, permissions, rotation, and prolonged-display behavior still need physical-iPad verification.</p>
+        </div>
+
+        <div class="frame-gallery-mini" aria-label="Additional Frame states">
+          <figure>
+            <img src="./assets/screens/settings.png" alt="Frame settings panel with a greeting name, dynamic wave toggle, and background theme choices" loading="lazy" width="1800" height="1251" />
+            <figcaption><strong>04 / Make it yours</strong><span>Long-lived choices live in one focused settings surface.</span></figcaption>
+          </figure>
+          <figure>
+            <img src="./assets/screens/music-overlay.png" alt="Frame music overlay showing an album cover, track title, and playback controls" loading="lazy" width="1800" height="1251" />
+            <figcaption><strong>05 / Add atmosphere</strong><span>Music stays optional and subordinate to the main view.</span></figcaption>
+          </figure>
+          <figure>
+            <img src="./assets/screens/dashboard-quiet.png" alt="Frame quiet dashboard state showing no updates that need attention" loading="lazy" width="1800" height="1251" />
+            <figcaption><strong>06 / Let quiet be useful</strong><span>“All quiet here” is a meaningful state, not an empty screen.</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="frame-dark-panel" aria-labelledby="principles-title">
+        <div class="frame-dark-intro">
+          <p class="eyebrow">Four rules for an always-on screen</p>
+          <h2 id="principles-title">Stay visible.<br /><span>Stay quiet.</span></h2>
+          <p>Frame is not trying to win a notification arms race. It is a small piece of household infrastructure that should make the next useful action easier to see.</p>
+        </div>
+        <ol class="frame-principles">
+          <li><span>01</span><div><strong>Glanceable</strong><p>Readable from several feet away in a few seconds.</p></div></li>
+          <li><span>02</span><div><strong>Camera-first</strong><p>One focused feed, with snapshots and pagination instead of a video wall.</p></div></li>
+          <li><span>03</span><div><strong>Permission-legible</strong><p>Access boundaries and unavailable states are part of the design.</p></div></li>
+          <li><span>04</span><div><strong>Progressive</strong><p>Keep the ambient layer simple; put detail one tap away.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="frame-section frame-build" id="build" aria-labelledby="build-title">
+        <div class="frame-section-heading">
+          <div>
+            <p class="eyebrow">Built as a product, not a rendering</p>
+            <h2 id="build-title">The interface is a state machine with a point of view.</h2>
+          </div>
+          <p>Frame’s external services sit behind protocols, so the same surface can be demonstrated with deterministic mock data and connected to real Apple capabilities without rewriting the interaction model.</p>
+        </div>
+
+        <div class="frame-build-grid">
+          <div class="frame-build-copy">
+            <p>One main-actor dashboard model coordinates the selected feed, the ambient mode, the Updates summary, and each integration’s loading, denied, empty, stale, offline, and failed states.</p>
+            <p>That architecture matters because a persistent display cannot disappear every time one service is unavailable. The last useful state stays visible while the app explains what is restoring.</p>
+            <div class="frame-architecture" aria-label="Frame architecture flow">
+              <span>SwiftUI surface</span><i aria-hidden="true">→</i><span>Dashboard model</span><i aria-hidden="true">→</i><span>Protocol-backed services</span>
+            </div>
+          </div>
+
+          <div class="frame-frameworks" aria-label="Apple frameworks used by Frame">
+            <div><strong>WeatherKit</strong><span>Current conditions and daily range</span></div>
+            <div><strong>EventKit</strong><span>Next relevant calendar context</span></div>
+            <div><strong>HomeKit</strong><span>Authorized home feeds and controls</span></div>
+            <div><strong>AVFoundation</strong><span>Local front-camera Mirror view</span></div>
+            <div><strong>HealthKit</strong><span>Optional sleep-aware ambient mode</span></div>
+            <div><strong>MusicKit</strong><span>Optional ambient music overlay</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="frame-privacy" aria-labelledby="privacy-title">
+        <div class="frame-privacy-mark" aria-hidden="true"><span></span><i></i></div>
+        <div>
+          <p class="eyebrow">The quiet part is a boundary</p>
+          <h2 id="privacy-title">Frame shows what it is allowed to know.</h2>
+          <p>The Mirror feed is local AVFoundation capture. The prototype does not record, upload, analyze, or persist camera frames. Updates are limited to approved sources such as Calendar, Weather, HomeKit, Health, Music, and Frame-owned state.</p>
+        </div>
+      </section>
+
+      <section class="frame-section frame-next" aria-labelledby="next-title">
+        <div>
+          <p class="eyebrow">Current status</p>
+          <h2 id="next-title">A working prototype, ready for the next round of evidence.</h2>
+        </div>
+        <div class="frame-next-copy">
+          <p>The core flow is in place: cached-first startup, an ambient dashboard, a feed carousel, Updates detail, settings, music overlay, and designed permission/offline states. The next design pass belongs on the physical iPad where camera, HomeKit, rotation, brightness, and distance can be tested as one system.</p>
+          <div class="frame-actions">
+            <a class="button frame-button-primary" href="../portfolio/#frame">Back to the portfolio <span aria-hidden="true">↗</span></a>
+            <a class="button frame-button-secondary" href="mailto:rthirumaligai@gmail.com">Talk about Frame <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="frame-footer">
+        <span>Frame · an ambient iPad dashboard</span>
+        <a href="#frame-title">Back to top <span aria-hidden="true">↑</span></a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../assets/js/include-nav.js"></script>
+</body>
+
+</html>

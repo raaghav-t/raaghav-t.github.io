@@ -9,6 +9,7 @@ dark pill-shaped actions, and a persistent profile/navigation rail.
 ```text
 /
 ├── /portfolio/                         Prototyping portfolio [reference]
+├── /frame/                              Frame iPadOS product + case study
 ├── /ctrl/                              Controls portfolio [reference]
 ├── /projects.html                      Project index [older → unified]
 │   ├── /project-satellite-MPC.html     Satellite rendezvous / MPC [older → unified]
