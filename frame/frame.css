@@ -349,6 +349,11 @@ body.frame-page {
   align-items: center;
 }
 
+.frame-origin-visuals {
+  display: grid;
+  gap: 18px;
+}
+
 .frame-sketch-card {
   margin: 0;
   padding: 12px;
@@ -384,10 +389,17 @@ body.frame-page {
 }
 
 .frame-sketch-card figcaption {
+  display: grid;
+  gap: 4px;
   padding: 13px 8px 3px;
   color: var(--frame-ink-soft);
   font-size: 0.84rem;
   line-height: 1.42;
+}
+
+.frame-sketch-card figcaption strong {
+  color: var(--frame-ink);
+  font-family: "Sora", sans-serif;
 }
 
 .frame-origin-copy > p:not(.eyebrow) {
