@@ -12,7 +12,39 @@
   var targets = document.querySelectorAll('[data-include="nav"]');
   if (!targets.length) return;
 
+  function normalizedPagePath(path) {
+    if (path === "/index.html") return "/";
+    return path;
+  }
+
+  function addSourceTags(container) {
+    var sourceTag = (document.body.dataset.sourceTag || "").trim();
+    if (!sourceTag) return;
+
+    var currentPath = normalizedPagePath(window.location.pathname);
+
+    container.querySelectorAll("a[href]").forEach(function (link) {
+      var rawHref = link.getAttribute("href");
+      if (!rawHref || rawHref.charAt(0) === "#") return;
+
+      var url;
+      try {
+        url = new URL(rawHref, document.baseURI);
+      } catch (_) {
+        return;
+      }
+
+      if (url.origin !== window.location.origin) return;
+      if (normalizedPagePath(url.pathname) === currentPath) return;
+      if (url.search) return;
+
+      link.setAttribute("href", url.pathname + "?" + sourceTag + url.hash);
+    });
+  }
+
   function activateAndFilter(container) {
+    addSourceTags(container);
+
     var navKey = (document.body.dataset.nav || "").trim();
     if (navKey) {
       var active = container.querySelector('[data-nav-key="' + navKey + '"]');

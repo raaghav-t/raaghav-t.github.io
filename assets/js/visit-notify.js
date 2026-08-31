@@ -1,5 +1,5 @@
 (() => {
-  const endpoint = "https://script.google.com/macros/s/AKfycbyHEDITtPmHTkJD_6oPEvoKr6sfRWSi_Y8Inh2O3hEiyKbQbzzFa6x8itoyThb0zplx/exec";
+  const endpoint = "https://script.google.com/macros/s/AKfycby_Rou3Y1QwihkAzC1yEBigtJtcsdjMnvEj-rXwKeJRIA57XOyE5Xhjb-eURbWeM3eK/exec";
 
   const normalizePath = (path) => {
     if (path === "/portfolio") return "/portfolio/";
