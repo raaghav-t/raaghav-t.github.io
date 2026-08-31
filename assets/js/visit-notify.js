@@ -8,8 +8,11 @@
   };
 
   const path = normalizePath(window.location.pathname);
-  // Link labels are intentionally expressed as bare query keys, such as ?acv.
-  const sourceTag = [...new URLSearchParams(window.location.search).keys()][0] || "";
+  const parameters = new URLSearchParams(window.location.search);
+  const sourceEntry = parameters.has("utm_source")
+    ? ["utm_source", parameters.get("utm_source") || ""]
+    : parameters.entries().next().value || ["", ""];
+  const [sourceTag, sourceValue] = sourceEntry;
   const userAgent = navigator.userAgent.toLowerCase();
   const visitType = /(bot|crawler|spider|headless|lighthouse|slurp|bingpreview)/.test(userAgent)
     ? "Likely automated"
@@ -20,6 +23,7 @@
     hostname: window.location.hostname,
     path,
     sourceTag,
+    sourceValue,
     visitType,
   });
 
