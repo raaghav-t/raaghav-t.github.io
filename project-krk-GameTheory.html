@@ -85,17 +85,17 @@
                 <strong>Core strategy computation</strong>
                 <ul class="clean">
                   <li>depth-limited minimax</li>
-                  <li>alpha-beta pruning</li>
                   <li>best-response assumption at each ply</li>
+                  <li>terminal rewards and penalties with mobility shaping</li>
                 </ul>
               </div>
             </div>
             <div class="span-6">
               <div class="filler" style="min-height:0;">
-                <strong>Dynamic-programming flavor</strong>
+                <strong>Legal and terminal logic</strong>
                 <ul class="clean">
-                  <li>memoized recursive evaluation</li>
-                  <li>persistent transposition-style cache reuse</li>
+                  <li>legal-move generation</li>
+                  <li>checkmate and stalemate detection</li>
                   <li>terminal-state early exits</li>
                 </ul>
               </div>
@@ -120,7 +120,7 @@
           <h2>Project Assets</h2>
           <a class="preview-link" href="assets/docs/projects/krk/FinalPres.pdf" target="_blank" rel="noopener">
             <h3>Final Presentation (PDF)</h3>
-            <p>Slides from the final class presentation: formulation, legality model, minimax/alpha-beta/memoization design, and rollout examples.</p>
+            <p>Slides from the final class presentation: formulation, legality model, depth-limited minimax, payoff design, and rollout examples.</p>
           </a>
         </article>
       </section>
